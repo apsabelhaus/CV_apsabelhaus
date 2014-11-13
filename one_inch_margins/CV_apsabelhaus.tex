@@ -22,36 +22,53 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+\documentclass[12pt,letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+%\thispagestyle{empty}
+
+\usepackage[export]{adjustbox}
+
+%%%%%%%%%% EXACT 1in MARGINS %%%%%%%                                   %%
+\setlength{\textwidth}{6.5in}     %%                                   %%
+\setlength{\oddsidemargin}{0in}   %% (It is recommended that you       %%
+\setlength{\evensidemargin}{0in}  %%  not change these parameters,     %%
+\setlength{\textheight}{8.5in}    %%  at the risk of having your       %%
+\setlength{\topmargin}{0in}       %%  proposal dismissed on the basis  %%
+\setlength{\headheight}{0in}      %%  of incorrect formatting!!!)      %%
+\setlength{\headsep}{0in}         %%                                   %%
+\setlength{\footskip}{.5in}       %%                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \begin{document}
-
+\thispagestyle{empty}
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\lastupdated % Print the Last Updated text at the top right
+%\lastupdated % Print the Last Updated text at the top right
 
-\raggedright{ % left-align the heading
-\namesection{Drew (Andrew P.)}{Sabelhaus}{ % Your name
-2807 Piedmont Ave, Berkeley CA 94705 \\
-\urlstyle{same}\url{www.apsabelhaus.com} | 
-\href{mailto:apsabelhaus@berkeley.edu}{apsabelhaus@berkeley.edu} | (301) 807-9842}
-}
+%\centering{ % left-align the heading
+\underline{
+\uppercase{Drew (Andrew P.) Sabelhaus | C.V. | www.apsabelhaus.com}
+}\\
+%}
 
+\fussy
+\vspace{-0.6cm}
 %----------------------------------------------------------------------------------------
 %	LEFT COLUMN
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
 
+\begin{minipage}[t][6.8in]{0.33\textwidth}% The left column takes up 33% of the text width of the page
+%\vspace{0.2cm}
 %------------------------------------------------
 % Education
 %------------------------------------------------
+\section{\underline{Education} }
 
-\section{Education} 
+\vspace{0.2cm}
 
-\subsection{University of California, Berkeley}
+\subsection{\textbf{University of California, Berkeley}}
 
 \descript{PhD. Mechanical Engineering, Controls}
 \location{Expected May 2017}
@@ -60,97 +77,150 @@
 
 \descript{MS. Mechanical Engineering, Controls}
 \location{Expected Dec 2014}
+\location{GPA: 3.78}
 
 \sectionspace % Some whitespace after the section
 
 %------------------------------------------------
 
-\subsection{University of Maryland}
+\subsection{\textbf{University of Maryland}}
 
 \descript{B.S. Mechanical Engineering, Minor in Computer Science}
 \location{May 2012 | College Park, MD}
-\location{GPA: 3.77} % check this!!!!
+\location{GPA: 3.69}
 
 \sectionspace % Some whitespace after the section
 
-%------------------------------------------------
-% Links
-%------------------------------------------------
+\section{\underline{Honors, Awards}}
 
-%\section{Links} 
+\vspace{0.2cm}
 
-%Github:// \href{https://github.com/deedydas}{\bf deedydas} \\
-%LinkedIn:// \href{https://www.linkedin.com/in/debarghyadas}{\bf debarghyadas} \\
-%YouTube:// \href{https://www.youtube.com/user/DeedyDash007}{\bf DeedyDash007} \\
-%Twitter:// \href{https://twitter.com/debarghya_das}{\bf @debarghya\_das} \\
-%Quora:// \href{https://www.quora.com/Debarghya-Das}{\bf Debarghya-Das}
+%\begin{tightitemize}
 
-%\sectionspace % Some whitespace after the section
+%\item NSF Graduate Research Fellowship, 2012-Present\\
 
-%------------------------------------------------
-% Coursework
-%------------------------------------------------
+%\item Markowski-Leach Scholarhip, 2013-Present\\
 
-%\section{Coursework}
+%\end{tightitemize}
+\textbullet{} NSF Graduate Research\\ \quad Fellowship, 2012-Present\\
+\vspace{0.1cm}
 
-%\subsection{Graduate}
+\textbullet{} Markowski-Leach\\ \quad Scholarship, 2013-Present\\
+\vspace{0.1cm}
 
-%Advanced Machine Learning \\
-%Open Source Software Engineering \\
-%Advanced Interactive Graphics \\
-%Compilers + Practicum \\
-%Cloud Computing
+\textbullet{} University of Maryland\\ \quad Engineering Leadership\\ \quad Award, 2012\\
+\vspace{0.1cm}
 
-%\sectionspace % Some whitespace after the section
+\textbullet{} University of Maryland\\ \quad Presidential Scholarship,\\ \quad 2008-2012\\
+\vspace{0.1cm}
 
-%------------------------------------------------
+\textbullet{} L-3 Communications\\ \quad Scholarship, 2011-2012\\
+\vspace{0.1cm}
 
-%\subsection{Undergraduate}
+\textbullet{} University of Maryland\\ \quad Office of LGBT Equity\\ \quad Scholarship, 2011\\
+\vspace{0.1cm}
 
-%Information Retrieval \\
-%Operating Systems \\
-%Artificial Intelligence + Practicum \\
-%Functional Programming \\
-%Computer Graphics + Practicum \\
-%{\footnotesize \textit{\textbf{(Research Asst. \& Teaching Asst) }}} \\
-%Unix Tools and Scripting
+\textbullet{} Thales Communications\\ \quad Scholarship, 2010\\
+\vspace{0.1cm}
 
-%\sectionspace % Some whitespace after the section
+\textbullet{} Terex Corporation\\ \quad Scholarship, 2009\\
 
-%------------------------------------------------
-% Skills
-%------------------------------------------------
-
-\section{Skills}
-
-\subsection{Programming}
-
-\location{Over 2000 lines:}
-C \textbullet{} C++ \textbullet{} Shell \textbullet{} MATLAB \\ 
-Java \textbullet{} \LaTeX \\
-\location{Over 500 lines:}
-Python \textbullet{} C++ \textbullet{} Ruby \textbullet{} Assembly \\
-\location{Familiar:}
-OCaml \textbullet{} Julia \textbullet{} Android \textbullet{} Javascript
-
-\sectionspace % Some whitespace after the section
-
-%----------------------------------------------------------------------------------------
-
-\end{minipage} % The end of the left column
+%----------------------------------------------------------------------------
+\end{minipage}% The end of the left column. Ensures no space.
 \hfill
 %
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 %	RIGHT COLUMN
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------
 %
-\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+%\raggedright{
+\hspace{-3in}
+\begin{minipage}[t][6.8in][t]{0.66\textwidth}% The right column takes up 66% of the text width of the page
+%\begin{minipage}[t][7in]{0.66\textwidth}% The right column takes up 66% of the text width of the page
+%-----------------------------------------------------------------------
+% Pubications
+%------------------------------------------------------------------------
+\raggedright{
+
+\hspace{-2in}
+
+\section{\quad \underline{Publications}}
+
+\vspace{0.4cm}
+
+\begin{tightitemize}
+
+\item \textbf{System Design and Locomotion of SUPERball, an Autonomous Tensegrity Robot.} Sabelhaus, A.P. et al. Submitted to International Conference on Robotics \\and Automation (ICRA) 2015
+
+\item \textbf{Design and Control of Compliant Tensegrity Robots through Simulation and Hardware Validation.} Caluwaerts, K., ... Sabelhaus, A.P. et al. Journal of the Royal Society Interface 2014
+
+\item \textbf{Hardware Design and Testing of SUPERball, a Modular Tensegrity Robot.} Sabelhaus, A.P. et al. The 6th World Conference on Structural Control and Monitoring (6WCSM) 2014
+
+\item \textbf{SUPERball: Exploring Tensegrities for Planetary Probes.} Bruce, J., Sabelhaus, A.P. et al. 12th International Symposium on Artificial Intelligence, Robotics, and Automation in Space (i-SAIRAS) 2014
+
+\item \textbf{Design and Evolution of a Modular Tensegrity Robot Platform.} Bruce, J., ...Sabelhaus, A.P. et al. International Conference on Robotics and Automation (ICRA) 2014
+
+\item \textbf{TinyTeRP: A Tiny Terrestrial Robotic Platform with Modular Sensing.} Sabelhaus, A.P. et al. International Conference on Robotics and Automation (ICRA) 2013 
+
+\end{tightitemize}
+
+\sectionspace
+
+%-----------------------------------------------------
+% Presentations, Workshops, and Posters section.
+%-----------------------------------------------------
+
+\section{\quad \underline{Presentations, Workshops, Posters}}
+
+\vspace{0.4cm}
+\begin{tightitemize}
+
+\item \textbf{Mechatronic Design of Tensegrity Robotic Systems for Dynamic Locomotion.} NASA Ames Research Center Autonomous Systems Lab Intern Poster Symposium, Aug 2013. Poster Session.
+
+\item \textbf{TinyTeRP: A Tiny Terrestrial Robotic Platform with Modular Sensing.} International Conf. on Robotics and Automation (ICRA), May 2013. Presentation.
+
+\item \textbf{TinyTeRP: A Tiny Terrestrial Robotic Platform.} International Symposium on Distributed Autonomous Robotic Systems (DARS), Nov 2012. Poster Session.
+
+\end{tightitemize}
+
+%\sectionspace
 
 %------------------------------------------------
-% Research Experience - comes first because I'm in grad school!
-%------------------------------------------------
+% New page after publications, because I have a ton already
+% Note that we have to do this in a minipage (ARGH) because of
+% a weird ``unskip'' error if not.
+%-----------------------------------------------
+}
+\end{minipage}% <- ensures no space at the end
+%}
 
-\section{Research}
+\vspace{0.45cm}
+
+\raggedright{
+\quad \underline{OUTREACH, LEADERSHIP}\\
+
+\begin{tightitemize}
+
+\item \textbf{Graduate Peer Advisor}. Equity, Diversity, and Inclusion Initiative in the Mechanical Engineering Department at UC Berkeley. Aug 2014 - Present.
+
+\item \textbf{Coordinator, Chapter Leadership Programs}. Out in Science, Technology, Engineering, and Mathematics (oSTEM) Incorporated. July 2012 - Present.
+
+\item \textbf{President, Co-Founder}. oSTEM at the University of Maryland. Nov 2010 - Apr 2012.
+
+\end{tightitemize}
+%Here is some new text.
+%This is the same paragraph.\\
+%This is a new paragraph.
+}
+\newpage % Start a new page
+\thispagestyle{empty}
+\begin{minipage}[t]{1\textwidth}% This minipage is the full width of the page.
+%------------------------------------------------
+% Research Experience
+%------------------------------------------------
+\section{\underline{Research Experience}}
+
+\vspace{0.2cm}
 
 \runsubsection{Berkeley Emergent Space Technologies Lab (BEST)}
 \descript{| Graduate Research Fellow}
@@ -158,7 +228,9 @@ OCaml \textbullet{} Julia \textbullet{} Android \textbullet{} Javascript
 \location{Sept 2012 - Present | Berkeley, CA}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightitemize}
-\item Space robots
+\item Led team of 5 master's students in designing and testing stuctural robotics components
+\item Created new research program (the ``Tensegrity Spine Hardware Project''), recruited 5 master's students, led team on design and controls research
+\item Recruited and mentored 2 undergraduate researchers
 \end{tightitemize}
 
 \sectionspace % Some whitespace after the section
@@ -170,7 +242,11 @@ OCaml \textbullet{} Julia \textbullet{} Android \textbullet{} Javascript
 
 \location{Feb 2013 - Present | Moffett Field, CA}
 \begin{tightitemize}
-\item Hooray!
+\item Mechanical design of SUPERball, an autonomous tensegrity robot: cable driving system, actuation system, active compliance spring system
+\item Sensor design for SUPERball: fabricated, tested, and calibrated, custom force gauges
+\item Assisted in electronics design for SUPERball and programming in ROS (Robotic OS)
+\item Wrote and maintained pieces of the NASA Tensegrity Robotics Toolkit (NTRT) in C++
+\item Simulated different motions of SUPERball in NTRT, tested potential controls
 \end{tightitemize}
 
 \sectionspace % Some whitespace after the section
@@ -182,97 +258,86 @@ OCaml \textbullet{} Julia \textbullet{} Android \textbullet{} Javascript
 
 \location{Feb 2011 – Aug 2012 | College Park, MD}
 \begin{tightitemize}
-\item also Hooray!
+\item Designed circuit and PCB layout for 1.2 cm$^2$ mobile robot
+\item Wrote data collection software and control algorithm for robot
+\item Led team of 3 undergraduates and 1 REU student to a successful paper submission
 \end{tightitemize}
 
 \sectionspace % Some whitespace after the section
 
 %------------------------------------------------
-% Publications
-%------------------------------------------------
 
-\section{Publications}
-\runsubsection{System Design and Locomotion of SUPERball, an Autonomous Tensegrity Robot}
-\descript{Submitted to ICRA 2015}
-Insert short abstract here
+\runsubsection{U.S. Army Corps of Engineers Research Center}
+\descript{| Mechanical Engineering Research Intern}
+
+\location{Summer 2011 | Alexandria, VA}
+\begin{tightitemize}
+\item Researched and tested long-range wireless sensor network system
+\item Wrote data collection software and management software for network nodes
+\end{tightitemize}
 
 \sectionspace
 
-%\runsubsection{Cornell Robot Learning Lab}
-%\descript{| Head Undergrad Research}
-
-%\location{Jan 2014 – Present | Ithaca, NY}
-%Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which learns from large scale user preference feedback to plan robot trajectories in human environments. Publication submitted.
-
-%\sectionspace % Some whitespace after the section
-
+%------------------------------------------------
+% Engineering Design Experience
 %------------------------------------------------
 
-%\runsubsection{Cornell Phonetics Lab}
-%\descript{| Head Undergraduate Researcher}
+\section{\underline{Other Engineering Design Experience}}
 
-%\location{Mar 2012 – May 2013 | Ithaca, NY}
-%Lead the development of \textbf{QuickTongue}, the first ever breakthrough tongue-con%trolled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tils%en}} to aid in Linguistics research. Publication submitted.
+\vspace{0.2cm}
 
-%\sectionspace % Some whitespace after the section
+%---------------------------------------------
 
-%------------------------------------------------
-% Awards
-%------------------------------------------------
+\runsubsection{Soft Classification for Hybrid Systems using Gaussian Process Models}
 
-\section{Awards} 
+\location{Spring 2014 | Hybrid Systems Identification and Control Course, UC Berkeley}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
 
-\begin{tabular}{rll}
-2012     & NSF Graduate Research Fellowship
-%2014	 & top 52/2500 & KPCB Engineering Fellow\\
-%2014	 & 2\textsuperscript{nd} most points & Google Code Jam, Qualification Round\\
-%2014	 & 1\textsuperscript{st}/50 & Microsoft Coding Competition, Cornell\\
-%2013	 & National & Jump Trading Challenge Finalist\\
-%2013 & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament \\
-%2012 & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
-%2011 & National & Indian National Mathematics Olympiad (INMO) Finalist \\
-%2010 & National & Comp. Soc. of India's National Programming Contest\\
-\end{tabular}
+\item Researched Gaussian Process Models for Machine Learning, implemented software in MATLAB and Python for regression over GPs
+
+\item Developed innovative (to-be-published) algorithm for probabilistically classifying systems with online regression
+
+\item Evaluated algorithm on simulated system (data from SUPERball simulation in NTRT)
+
+\end{tightitemize}
+
+\sectionspace
+
+\runsubsection{Optimization-Based Control for an Underactuated Magnetic Levitation System}
+
+\location{Fall 2013 | Advanced Robotics Course, UC Berkeley}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+
+\item Designed a sequential quadratic programming trajectory-tracking controller for a simplied model of an underactuated magnetic levitation system
+
+\item Developed input-output nonlinear system transform for optimization initialization
+
+\item Simulated and evaluated trajectory tracking performance for disturbances
+
+\end{tightitemize}
 
 \sectionspace % Some whitespace after the section
 
-%------------------------------------------------
-% Societies
-%------------------------------------------------
+%-----------------------------------------
 
-%\section{Societies} 
+\runsubsection{NearZero Design Project}
+\descript{| Controls Group Lead}
 
-%\begin{tabular}{rll}
-%2014 & top 12\%ile & Tau Beta Pi Engineering Honor Society\\
-%2014 & National & The Global Leadership and Education Forum (tGELF)\\
-%2012 & National & Golden Key International Honor Society\\
-%2012 & National & National Society of Collegiate Scholars\\
-%\end{tabular}
+\location{Spring 2013 | Advanced Design and Automation Course, UC Berkeley}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
 
-%\sectionspace % Some whitespace after the section
+\item Designed sensing and actuation system (3 PCBs, digital and analog) for magnetically-levitated flywheel energy storage system
 
-%----------------------------------------------------------------------------------------
+\item Formulated a LQR controller, performed stability analysis of control system
 
+\end{tightitemize}
+
+\sectionspace % Some whitespace after the section
+
+%---------------------------------------------------------------------
 \end{minipage} % The end of the right column
-
-%----------------------------------------------------------------------------------------
-%	SECOND PAGE (EXAMPLE)
-%----------------------------------------------------------------------------------------
-
-%\newpage % Start a new page
-
-%\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
-
-%\section{Example Section}
-
-%\end{minipage} % The end of the left column
-%\hfill
-%\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
-
-%\section{Example Section 2}
-
-%\end{minipage} % The end of the right column
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
