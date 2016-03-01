@@ -3,8 +3,8 @@ all: paper
 paper: 
 	#rm img/*eps-converted-to.pdf
 	xelatex CV_apsabelhaus.tex
-	bibtex CV_apsabelhaus
-	xelatex CV_apsabelhaus.tex
+	#bibtex CV_apsabelhaus
+	#xelatex CV_apsabelhaus.tex
 	xelatex CV_apsabelhaus.tex
 
 clean:
