@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- No not edit this page in the web directory. -->
+<head>
+<title>bib2xhtml - Convert BibTeX Files into HTML</title>
+<meta name="AUTHOR" content="Diomidis Spinellis" />
+<script src="showeg.js" type="text/javascript"></script>
+</head>
+<body>
+<a href="https://github.com/dspinellis/bib2xhtml"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a><br /><br /><br /><br />
+<h1 align="right"><tt><font color="#ff0000">bib2xhtml dds</font></tt></h1>
+<img src="logo.jpeg" alt="Bib2XHTML logo" align="right" hspace="20" />
+
+<h2>bib2xhtml - Convert BibTeX Files into HTML</h2>
+ <!-- Introduction {{{1 -->
+ <em>bib2xhtml</em> is a program that converts BibTeX files into
+HTML (specifically <a href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</a>).
+The conversion is mostly done by specialized BibTeX style files,
+derived from a converted bibliography style template.
+This ensures that the original BibTeX styles are faithfully
+reproduced.
+Some postprocessing is performed by Perl code.
+<p />
+This is a fork of the
+<em>bib2html</em> program written by David Hull in 1996 and
+maintained by him until 1998.
+I have been a happy user of the program since 1995, using the program
+to keep my
+<a href="../../../pubs/index.html">publication list</a> up to date,
+and, to generate the
+<a href="../../../codereading/bib.html">on-line bibliography list</a>
+for my books
+<a href="../../../codequality">Code Quality: The Open Source Perspective</a>
+(Addison-Wesley 2006) and
+<a href="../../../codereading">Code Reading: The Open Source Perspective</a>
+(Addison-Wesley 2003).
+After 1998 no other changes were made to the program, and I failed
+to locate an active program home page.
+Since there were a number of changes I needed to bring the program
+up to date with evolving web standards,
+I decided to adopt <em>bib2html</em> for
+maintenance, evolution, and further distribution.
+The first new public release made in 2004, featured support for
+<a href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</a>.
+A number of subsequent releases fixed a number of problems, and
+added many significant features,
+such as new presentation formats, more flexible output, and Unicode support.
+Given that two projects on <a href="http://freshmeat.net">freshmeat.net</a>
+claim the name <em>bib2html</em>,
+on March 2004, I decided to rename the project
+into <em>bib2xhtml</em>, to emphasize the result's
+<a href="http://www.w3.org/TR/xhtml1/">XHTML</a> conformance.
+
+ <!-- Downloads and Documentation {{{1 -->
+<h3>Downloads and Documentation </h3>
+The current <em>bib2xhtml</em> version is VERSION.
+The following pages do not contain navigation links.
+Following a link will open a new browser window.
+<ul>
+<li><a href="bib2xhtml-VERSION.tar.gz">Source and documentation package (gzip tar format)</a></li>
+<li><a href="bib2xhtml-VERSION.zip">Source and documentation package (zip format)</a></li>
+<li><a href="bib2xhtml.html" target="NEW">Formatted manual page (HTML)</a></li>
+<li><a href="bib2xhtml.pdf" target="NEW">Formatted manual page (PDF)</a></li>
+<li><a href="ChangeLog.txt" target="NEW">Change log</a></li>
+<li> <a href="https://github.com/dspinellis/bib2xhtml">GitHub page</a> (use it to track progress, report issues, and contribute improvements)</li>
+<li> <a href="http://freecode.com/projects/bib2xhtml/">freecode.com page</a> (use it to subscribe and post comments)</li>
+</ul>
+
+ <!-- Examples {{{1 -->
+<h3>Examples</h3>
+Choose from the following options to see some examples that were generated
+by running <em>bib2xhtml</em> on this
+<a href="example.bib">bibliography input file</a>.
+
+<form name="myform" action="" method="get">
+<h4>Style</h4>
+<input type="radio" name="style" value="alpha" />alpha<br />
+<input type="radio" name="style" value="empty" />empty<br />
+<input type="radio" name="style" value="named" />named<br />
+<input type="radio" name="style" value="plain" />plain<br />
+<input type="radio" name="style" value="paragraph" />paragraph<br />
+<input type="radio" name="style" value="unsort" />unsort<br />
+<input type="radio" name="style" value="unsortlist" />unsortlist<br />
+<h4>Other options</h4>
+<input type="checkbox" name="chrono" value="-c" />-c (chronological sort) <br />
+<input type="checkbox" name="reverse" value="-r" />-r (reverse sort order) <br />
+<input type="checkbox" name="rnumber" value="-R" />-R (reverse order of key numbers) <br />
+<input type="checkbox" name="append" value="-k" />-k (append to the label of each entry its BibTeX key) <br />
+<input type="checkbox" name="unicode" value="-u" />-u (Unicode UTF-8 text) <br />
+<input type="checkbox" name="name" value="-n" />-n Spinellis (emphasize an author's name) <br />
+<p />
+
+<input type="button" name="button" value="See the result" onclick="showBib(this.form)" />
+(If your browser doesn't support JavaScipt, choose an example from
+<a href="static.html">this list</a>.)
+</form>
+
+
+<!-- End matter {{{1 -->
+<p />
+<a href="http://www.spinellis.gr">Diomidis Spinellis home page</a>
+
+<hr />
+<table>
+<tr><td>
+<a href="http://validator.w3.org/check/referer"><img src="../../../valid-xhtml10.png" border="0" alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+<a href="http://www.w3.org/WAI/WCAG1AAA-Conformance" title="Explanation of Level Triple-A Conformance"><img border="0" height="32" width="88" src="../../../wcag1AAA.gif" alt="Level Triple-A conformance icon, W3C-WAI Web Content Accessibility Guidelines 1.0" /></a>
+</td><td>
+<font size="-2">
+(C) Copyright 2002-2010 D. Spinellis.
+May be freely uploaded by WWW viewers and similar programs.
+All other rights reserved.
+<br />
+Last modified: $Date: 2011/10/08 18:02:42 $
+</font>
+</td></tr>
+</table>
+</body>
+</html>

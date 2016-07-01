@@ -1,0 +1,561 @@
+.\" $Id: \\dds\\src\\textproc\\bib2xhtml\\RCS\\bib2xhtml.man,v 1.27 2011/10/08 18:02:42 dds Exp $
+.TH BIB2XHTML L "8 October 2011"
+.SH NAME
+bib2xhtml \- BibTeX bibliography to XHTML converter
+.SH SYNOPSIS
+.B bib2xhtml
+[
+.B \-a
+] [
+.B \-b
+.I bibtex-options
+] [
+.B \-B
+.I bibtex-executable
+] [
+.B \-c
+] [
+.B \-D
+.I mappings
+] [
+.B \-d
+.I delimiter
+] [
+.B \-e
+.I extended-information
+] [
+.B \-h
+.I heading
+] [
+.B \-i
+] [
+.B \-k
+] [
+.B \-m
+.I macro-file
+] [
+.B \-n
+.I author-name
+] [
+.B \-r
+] [
+.B \-R
+] [
+.B \-s
+.I style
+] [
+.B \-t
+] [
+.B \-v
+] [
+.B \-u
+]
+.I sourcefile
+[
+.I htmlfile
+]
+.SH DESCRIPTION
+.LP
+.B bib2xhtml
+converts a bibtex-format bibliography file to XHTML.
+.I sourcefile
+may be either a BibTeX-format bibliography
+.RB ( .bib )
+file or a LaTeX-fomatted bibliography auxillary file
+.RB ( .aux ).
+.I htmlfile
+will often be just part of a larger
+XHTML file;
+.B bib2xhtml
+attempts to update the XHTML file in place.  It does this
+by searching
+.I htmlfile
+for two special strings, which delimit
+the bibliography part of the file.
+These strings are the XHTML comments
+.IP
+<!-- BEGIN BIBLIOGRAPHY
+.I delimiter
+-->
+.IP
+<!-- END BIBLIOGRAPHY
+.I delimiter
+-->
+.P
+If these delimiters are found, the old bibliography between them is
+replaced with the new bibliography.
+Otherwise the new bibliography, with the appropriate delimiters,
+is appended to the end of
+.IR htmlfile ,
+and it will be necessary to move it to the proper location by hand.
+Note that it is possible for
+.I htmlfile
+to contain any number of bibliographies, and they may be updated
+independently.
+If no
+.I htmlfile
+is specified, the bibliography is written to standard output.
+.P
+The tag of each BibTeX bibliography entry is converted into a name
+anchor (<A NAME="tag">) in
+.IR htmlfile ,
+and may be used to construct a link to this particular entry.
+.P
+By default the contents of the bibliography are determined by
+the contents of the
+.IR sourcefile .
+It is also possible to specify the contents of the bibliography in the
+.I htmlfile
+itself by setting the
+.B \-i
+option and using two special strings to delimit
+the citations to be used for generating the bibliography.
+These strings are the XHTML comments
+.IP
+<!-- BEGIN CITATIONS
+.I delimiter
+-->
+.IP
+<!-- END CITATIONS
+.I delimiter
+-->
+.P
+If these delimiters are found, the contents between them are searched for
+XHTML comments containing the citations (one citation per line), for example
+.IP
+<!-- BEGIN CITATIONS
+.I delimiter
+-->
+.IP
+.br
+<!-- \\citation{knuth:1997}
+.br
+    \\citation{knuth:1984} -->
+.br
+.IP
+<!-- END CITATIONS
+.I delimiter
+-->
+.P
+These citations are then used for choosing the bibliography entries from
+the
+.IR sourcefile .
+.SS Special Field Processing
+.P
+Several BibTeX fields are treated specially.  The filenames specified
+in the
+.BR postscript ,
+.BR pdf ,
+and
+.B dvi
+fields are relative to the
+.I htmlfile
+directory.  In addition,
+.B bib2xhtml
+recognizes compressed or gzipped files
+(those with filenames ending in
+.BR .Z ,
+.BR .gz ,
+or
+.BR .z ).
+.TP
+.B url
+If the
+.B url
+field exists, a link (``A'' tag) is created.  The destination
+of the link is the
+.B url
+tag's value.
+The bibliography entry's title is the source of the link.
+This can be used to create a link to a XHTML version of the paper,
+or to a version that is available by ftp.
+.TP
+.B mailto
+If the
+.B mailto
+field exists, a link (``A'' tag) is created.  The destination
+of the link is the
+.B mailto
+tag's value.
+The bibliography entry's author name is the source of the link.
+.TP
+.B postscript
+If the
+.B postscript
+field exists, its value is used as the name of a PostScript file.
+.B bib2xhtml
+creates a link to the file,
+and updates
+.I htmlfile
+with the number of pages and size of the PostScript file.
+.TP
+.B doi
+If the
+.B doi
+field exists, its value is used as the designation of a digital
+object identifier.
+.B bib2xhtml
+creates a link to the object through
+.I http://dx.doi.org
+and updates
+.I htmlfile
+with the
+.B doi
+as a hyperlink.
+The
+.B doi
+should normally be in a canonical form like the following:
+.I doi:10.1145/363347.363387.
+However,
+if the
+.B doi
+designator is formed as an HTTP hyperlink, it will be converted to the
+canonical form by replacing the HTTP protocol designation and the host
+name of the hyperlink with the
+.I doi:
+literal string.
+.TP
+.B pdf
+If the
+.B pdf
+field exists, its value is used as the name of a PDF (portable document
+format) file.
+.B bib2xhtml
+creates a link to the file and updates
+.I htmlfile
+with the size of the PDF file.
+.TP
+.B dvi
+If the
+.B dvi
+field exists, its value is used as the name of a TeX DVI file.
+.B bib2xhtml
+creates a link to the file and updates
+.I htmlfile
+with the number of pages and size of the DVI file.
+.TP
+.BR author , " keywords"
+The full
+.B author
+and
+.B keywords
+fields of each BibTeX entry are included in
+.I htmlfile
+as XHTML comments, and may be used by CGI scripts (such as
+.BR bibsearch ,
+which is supplied) to select only certain entries.
+.SS Hints
+.BR bib2xhtml 's
+LaTeX to XHTML conversion is not very smart.
+If something isn't being converted correctly, try doing it in a different way.
+.P
+.B bib2xhtml
+does not currently understand \fI\\verb\fR.
+To get a tilde into a filename or an embedded URL, use \fI\\~{}\fR.
+On the other hand, entries containing \fIURL\fR fields or
+\fI\\url{}\fR commands,
+are correctly converted into hyperlinks.
+Leave such hyperlinks as they are;
+do not embed any LaTeX commands in them.
+.P
+The lists that
+.B bib2xhtml
+generates contain CSS hooks of the class \fIbib2xhtml\fR.
+You can therefore modify the appearance of the lists
+by adding style entries like the following in the web page's header.
+.ft C
+.nf
+	  <style type="text/css">
+		  dl.bib2xhtml dd { padding-bottom: 1em }
+	  </style>
+
+	  <style type="text/css">
+		  ul.bib2xhtml li { padding-bottom: 1em }
+	  </style>
+.fi
+.ft P
+.P
+The value of the named attributes can contain arbitrary HTML markup commands,
+and can thus be used for substituting the text with icons.
+For example, the following Unix command can be used for creating stand-alone
+PDF icons.
+.ft C
+.nf
+    perl bib2xhtml -e 'nosize,nopages,PDF:<img src="pdficon_small.gif"
+      alt="PDF" border="0" />' example.bib example.html
+.fi
+.ft P
+Unser the Windows shell the corresponding command would be.
+.ft C
+.nf
+    perl bib2xhtml -e "nosize,nopages,PDF:<img src='pdficon_small.gif'
+      alt='PDF' border='0' />" example.bib example.html
+.fi
+.ft P
+A couple of PDF icons and the conditions for their use are available
+at
+.I http://www.adobe.com/misc/linking.html#pdficon .
+.P
+To display the number of pages in local PDF files, the Perl module
+\fIPDF::API2\fP must be installed on the system where
+.B bib2xhtml
+is running.
+A command like the following will accomplish this.
+.ft C
+.nf
+    perl -MCPAN -e "install PDF::API2"
+.fi
+.ft P
+
+.SH OPTIONS
+.TP
+.B \-a
+Include the BibTeX file's abstract field in the bibliography.
+.TP
+.BI \-b " bibtex-options"
+Provide the specified options to the BibTeX program.
+.TP
+.BI \-B " bibtex-executable"
+Specify the name or path of the bibtex executable program.
+By default this is \fIbibtex\fP.
+In some installations specifying \fIbibtex8\fP can prevent out of memory
+conditions.
+.TP
+.B \-c
+Sort chronologically.  Normally, the bibliography is ordered first by
+author and then by date.  With this option, the bibliography is
+ordered by year, month, day, and then by author.
+.TP
+.BI \-d " delimiter"
+Specify the delimiter that sets the bibliography off from the rest
+of the XHTML file.  The default delimiter is the name of the bibliography
+file with the
+.B .bib
+extension stripped.
+.TP
+.BI \-D " mappings"
+Define URL to directory mappings.
+The \fImappings\fP argument contains a sequence of comma-separated
+values.
+Each value contains a local file path and the corresponding URL,
+separated by an \fI@\fP sign.
+The resulting URL is used for linking the various paper file format types.
+.TP
+.BI \-e " extended-information"
+Specify how an entry's extended information will be displayed.
+The extended information is specified as a series of comma-separated
+attributes.
+The following plain attributes are supported.
+.RS
+.TP
+.B notype
+Do not display the file's type (PDF, Postscript, DVI).
+.TP
+.B nosize
+Do not display the file's size in bytes.
+.TP
+.B nopages
+Do not display the file's number of pages.
+.TP
+.B nocompression
+Do not display the file's compression type.
+.TP
+.B nodoi
+Do not display the file's DOI.
+.TP
+.B nobrackets
+Do not enclose the DOI link or the file's extended information in brackets.
+.RE
+.LP
+A number of valued attributes allow the specification of the text
+to display for various file types.
+These are written as a \fIname\fP:\fIvalue\fP pair.
+The following names are supported for valued attributes.
+.RS
+.IP \(bu
+PostScript
+.IP \(bu
+PDF
+.IP \(bu
+DVI
+.IP \(bu
+DOI
+.RE
+.BI \-h " heading"
+Use the string
+.I heading
+instead of the default title when creating a new
+.IR htmlfile .
+If updating an existing
+.IR htmlfile ,
+this option is ignored.
+.TP
+.BI \-i
+The citations are included in the
+.IR htmlfile .
+When this option is set, the
+.I sourcefile
+must be a .bib file.
+.TP
+.B -k
+In labeled styles
+.BR "" ( alpha ,
+.BR named ,
+.BR plain ,
+and
+.BR unsort )
+append to the label of each entry its BibTeX key.
+Thus, the label of each entry will consist of the original label,
+followed by an em-dash, followed by the BibTeX key.
+.TP
+.BI \-m " macro file"
+Specify a BibTeX macro file to supply to BibTeX when processing the
+bibliography file.
+Macro files typically contain local abbreviations and other macro
+definitions.
+.TP
+.BI \-n " author name"
+Specify an author name to highlight.
+Any bibliography entry author names that match the name specified as a regular
+expression will be set in HTML \fIstrong\fP tags and will therefore
+be displayed in a bold (or similar) font.
+.TP
+.B -r
+Reverse the chronological sorting order.  Normally, the bibliography
+is sorted (by year; BibTeX ignores the month)
+from the earliest entry to the latest entry.
+With this option, the order is reversed.
+Note that to obtain a bibliography ordered by chronological order you
+must also specify the
+.B \-c
+option.
+.TP
+.B -R
+Reference numbers increase from bottom to top, not from top to bottom.
+This option is useful, for example, in the following situation.
+When one keeps one's own publication list over many years or decades,
+one often prefers that
+(i) the new ones appear on top of the list,
+to give them more immediate attention, and
+(ii) reference numbers, once assigned, do not change, so as not to
+mess up old documents that use reference numbers.
+Using options
+.B -c
+.B -r
+and
+.B -R
+together satisfies this need.
+.TP
+.BI \-s " style"
+Create a
+.IR style \-style
+bibliography.  Supported styles are
+.B empty
+(the default),
+.BR plain ,
+.BR alpha ,
+.BR named ,
+.BR paragraph ,
+.BR unsort ,
+and
+.BR unsortlist .
+An
+.B empty
+bibliography is a bulleted list.  A
+.B plain
+bibliography is a numbered list.
+.B paragraph 
+produces just paragraphs (no bullets).
+.B unsort
+is like
+.B plain
+except that the entries in the XHTML file are in the same order as
+as they are in the source file.
+.B unsortlist
+is like
+.B unsort
+but entry labels are bullets instead of numbers.
+An
+.B alpha
+bibliography has labels that are in the BibTeX alpha style.  A
+.B named
+bibliography has labels of the form [name, year].
+.TP
+.B \-t
+Write a timestamp with the date at which the bibliography was
+updated to
+.IR htmlfile .
+.TP
+.B \-v
+Report version number on stderr.
+.TP
+.B \-u
+Convert LaTeX special characters into the corresponding
+Unicode characters, and output XML coded in UTF-8.
+The output produced by this option may be easier to parse and validate
+with some XML parsers.
+By default LaTeX special characters are converted into HTML character entities.
+.SH FILES
+.PD 0
+.TP 14
+.B html-a.bst
+alpha XHTML BibTeX style file
+.TP
+.B html-n.bst
+named XHTML BibTeX style file
+.TP
+.B html-u.bst
+unsort XHTML BibTeX style file
+.TP
+.BR html-aa.bst ", " html-na.bst ", " html-ua.bst
+versions of the above style files with abstracts
+.TP
+.B bibsearch
+a CGI script for performing bibliography searches
+.PD
+.SH SEE ALSO
+.BR perl (L),
+.BR bibtex (L).
+.br
+.ne 8
+.SH BUGS
+.LP
+The LaTeX to XHTML translation, while decent, is not perfect.
+.LP
+Requires bibtex and perl.  However, I think that most
+sites that would want to convert BibTeX to XHTML will already
+have both programs installed.
+.LP
+Relies on dviselect to count the number of pages in a DVI file.
+.SH AUTHORS
+David Hull
+while at the University of Illinois at Urbana-Champaign.
+.LP
+Diomidis Spinellis
+.RI ( dds@aueb.gr ),
+Athens University of Economics and Business.
+
+.SH HISTORY
+The program was originally written as
+.B bib2html
+by David Hull in 1996, who
+maintained it until 1998 (version 1.33).
+In 2002, due to the lack of visible updates on the web,
+the program was adopted for maintenance, distribution, and further evolution
+by Diomidis Spinellis.
+Changes made by him include support for XHTML 1.0 and documentation bug fixes.
+The first public release of the maintenance effort was in 2004 (version 2.1).
+On March 2004 the program was renamed into
+.B bib2xhtml
+to avoid confusion with projects using the name
+.B bib2html .
+Panos Louridas
+.RI ( louridas@aueb.gr )
+added the functionality for including the citations in the
+.I htmlfile .
+.LP
+See
+.I http://www.spinellis.gr/sw/textproc/bib2xhtml
+for the latest version.
+This is free software, and may be modified or redistributed under
+the terms of the GNU Public License.
