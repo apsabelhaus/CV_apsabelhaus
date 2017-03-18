@@ -48,100 +48,126 @@
 %--------------------------------------------------
 
 
-
-%--------------------------------------------------------------------------
-%	LEFT COLUMN
-%--------------------------------------------------------------------
-
-\begin{minipage}[t]{0.33\textwidth}% The left column takes up 33% of the text width of the page
-\vspace{0.2cm}
 %------------------------------------------------
 % Education
 %------------------------------------------------
-\section{Education} 
 
+% First, a double-column for the education section, to make
+% efficient use of whitespace.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colunm 1: ''Education'' heading, and UC Berkeley.
+\begin{minipage}[t]{0.5\textwidth}%
+
+\section{\underline{Education}}
 \vspace{0.2cm}
 
 \subsection{University of California, Berkeley}
 
+%\sectionspace
+\vspace{0.1cm}
+
 \descript{PhD. Mechanical Engineering, Controls}
 \location{Expected May 2018}
 
-\sectionspace % Some whitespace after the section
+%\sectionspace % Some whitespace after the section
+%\vspace{0.1cm}
 
 \descript{MS. Mechanical Engineering, Controls}
-\location{Dec. 2014 | GPA: 3.85}
+\location{Dec. 2014}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Column 2: Maryland.
+\end{minipage}% Can't have a new line, that makes a new paragraph.
+\hfill
+\begin{minipage}[t]{0.5\textwidth}%
+
+% generate some whitespace to align this heading with the other one
+\vspace{1.05cm}  
+  
+\subsection{University of Maryland, College Park}
+
+%\sectionspace
+\vspace{0.1cm}
+
+\descript{B.S. Mechanical Engineering, Minor in Comp. Sci.}
+\location{May 2012}
+
+\end{minipage}%
+\hfill
+\vspace{0.2cm}
+  
+% Single-column page now, no need to try the fancy double-column, since
+% I'm eliminating a lot of the excess material here.
+%\begin{minipage}[t]{1\textwidth}%
+%\vspace{0.2cm}
+  
+%------------------------------------------------
+% Education
+%------------------------------------------------
+%\section{Education} 
+
+%\vspace{0.2cm}
+
+%\subsection{University of California, Berkeley}
+
+%\descript{PhD. Mechanical Engineering, Controls}
+%\location{Expected May 2018}
+
+%\sectionspace % Some whitespace after the section
+
+%\descript{MS. Mechanical Engineering, Controls}
+%\location{Dec. 2014 | GPA: 3.85}
 %\location{GPA: 3.85}
 
-\sectionspace % Some whitespace after the section
+%\sectionspace % Some whitespace after the section
 
 %------------------------------------------------
 
-\subsection{University of Maryland}
+%\subsection{University of Maryland}
 
-\descript{B.S. Mechanical Engineering, Minor in Computer Science}
-\location{May 2012 | College Park, MD}
-\location{GPA: 3.7}
+%\descript{B.S. Mechanical Engineering, Minor in Computer Science}
+%\location{May 2012 | College Park, MD}
+%\location{GPA: 3.7}
 
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Skills
-%------------------------------------------------
-
-\section{Skills}
-
-\vspace{0.2cm}
-
-\subsection{Programming}
-
-\location{Over 2000 lines:}
-C \textbullet{} C++ \textbullet{} Linux Shell \\ 
-MATLAB \textbullet{} Java \textbullet{} \LaTeX \\
-\location{Over 500 lines:}
-Python \textbullet{} Ruby \textbullet{} Assembly: ia32, MIPS \\
-Visual Basic \textbullet{} nesC, TinyOS\\
-\location{Familiar:}
-OCaml \textbullet{} Julia \textbullet{} Android \textbullet{} Javascript \\
-JSON \textbullet{} HTML \textbullet{} XML\\
-
-\sectionspace
-
-\subsection{Engineering Fabrication}
-
-Surface-Mount PCB Layout and Assembly\\
-Digital and Analog Circuit Design\\
-Control System Design and Testing\\
-Soldering \textbullet{} Machine Shop \textbullet{} Tolerancing\\
+%\sectionspace % Some whitespace after the section
 
 
-\sectionspace % Some whitespace after the section
 
-\subsection{Honors, Awards}
 
-NASA Space Tech. Research Fellow, '15\\
-NSF Graduate Research Fellowship, '12\\
-Markowski-Leach Scholarship, '13-14\\
-U.Md. Engineering Leadership Award, '12\\
-U.Md. Presidential Scholarship, '08-12\\
-L-3 Communications Scholarship, '11-12\\
-U.Md. LGBT Equity Office Scholarship, '11\\
-Thales Communications Scholarship, '10\\
-Terex Corporation Scholarship, '09\\
+%\sectionspace % Some whitespace after the section
+
+%\subsection{Honors, Awards}
+
+%NASA Space Tech. Research Fellow, '15\\
+%NSF Graduate Research Fellowship, '12\\
+%Markowski-Leach Scholarship, '13-14\\
+%U.Md. Engineering Leadership Award, '12\\
+%U.Md. Presidential Scholarship, '08-12\\
+%L-3 Communications Scholarship, '11-12\\
+%U.Md. LGBT Equity Office Scholarship, '11\\
+%Thales Communications Scholarship, '10\\
+%Terex Corporation Scholarship, '09\\
 
 %----------------------------------------------------------------------------
-\end{minipage}% The end of the left column. Ensures no space.
-\hfill
+%\end{minipage}% The end of the left column. Ensures no space.
+%\hfill
 %
 %----------------------------------------------------------------------------
 %	RIGHT COLUMN
 %----------------------------------------------------------------------------
 %
-\begin{minipage}[t]{0.66\textwidth}% The right column takes up 66% of the text width of the page
+%\begin{minipage}[t]{0.66\textwidth}% The right column takes up 66% of the text width of the page
+
+
 %-----------------------------------------------------------------------
 % Pubications
 %------------------------------------------------------------------------
-\section{Publications}
+
+% Use the full width of the paper.
+\begin{minipage}[t]{1\textwidth}%
+  
+\section{\underline{Publications}}
 
 \vspace{0.4cm}
 
@@ -165,11 +191,17 @@ Terex Corporation Scholarship, '09\\
 
 \end{tightitemize}
 
-\sectionspace
+%\sectionspace
+
+\end{minipage}% <- ensures no space at the end
+\newpage % Start a new page
+\begin{minipage}[t]{1\textwidth}% This minipage is the full width of the page.
 
 %-----------------------------------------------------
 % Presentations, Workshops, and Posters section.
 %-----------------------------------------------------
+
+
 
 \section{Presentations, Workshops, Posters}
 
