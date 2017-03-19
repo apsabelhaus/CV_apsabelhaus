@@ -88,6 +88,13 @@ Last Updated on \today % Last Updated text
 \newcommand{\location}[1]{ % Used for specifying a duration and/or location under a subsection
 \color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
+% Added by Drew Sabelhaus 2017-03-18
+% These commands are used to get the fonts from above, without the extra formatting.
+\newcommand{\fontsection}[1]{\color{headings}\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase {#1}}
+\newcommand{\fontsubsection}[1]{\color{subheadings}\scshape\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont \raggedright\bfseries\uppercase {#1}}
+\newcommand{\fontdescript}[1]{\color{subheadings}\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \scshape {#1}}
+\newcommand{\fontlocation}[1]{\color{headings}\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1}}
+
 %----------------------------------------------------------------------------------------
 %	SECTION TITLE STYLING AND SPACING
 %----------------------------------------------------------------------------------------
