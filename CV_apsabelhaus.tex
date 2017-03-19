@@ -23,10 +23,8 @@
 
 \documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4
 
-% TO-ADD:
-% BARS talk
-% Theses: my master's thesis
-% Mentoring of undergraduate and graduate students
+% Some other packages:
+\usepackage{etaremune} % enumerate in reverse. That's silly. Used for publications.
 
 \begin{document}
 
@@ -139,8 +137,11 @@
 %\sectionspace
 
 \begin{itemize}
+  
 \item {\fontdescript{NASA Space Technology Research Fellowship.}} Full student support, plus supplies (\$75,000/yr), 4 years. Title: {\it Trajectory Tracking in Nonlinear, High-Order, Underactuated Robotic Systems.} 2015-2018/19.
+
 \item {\fontdescript{NSF Graduate Research Fellowship.}} Full student support (\$32,000/yr), 3 years. 2012-2015
+
 \end{itemize}
 
 
@@ -156,7 +157,8 @@
 %\vspace{0.4cm}
 
 %\begin{tightitemize}
-\begin{itemize}
+%\begin{itemize}
+\begin{etaremune}
 
 \item {\fontdescript{Model-Predictive Control of a Flexible Spine Robot.}} \underline{Sabelhaus, A.P.}; Akella, A.K.; Ahmad, Z.A.; SunSpiral, V.; American Control Conference, May 2017.
   
@@ -177,8 +179,9 @@
 \item {\fontdescript{TinyTeRP: A Tiny Terrestrial Robotic Platform with Modular Sensing.}} \underline{Sabelhaus, A.P.}; Mirsky, D.; Hill, L.M.; Bergbreiter, S.; IEEE International Conference on Robotics and Automation (ICRA), May 2013
 
 
-  %\end{tightitemize}
-\end{itemize}
+%\end{tightitemize}
+%\end{itemize}
+\end{etaremune}
 
 %\sectionspace
 
