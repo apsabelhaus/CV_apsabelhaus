@@ -9,7 +9,8 @@ HELP=0
 HELPMESSAGE=$'\nThe make_html_bib.sh script requires one option: the name of the bib file to convert. \nBy default, this assumes the bib file is under ./bib_files/. \n \nOptions: -h, print this help message.'
 
 # Prefix for the file path:
-FILE_PREFIX='bib_files/'
+#FILE_PREFIX='bib_files/'
+#FILE_PREFIX='.'
 
 while getopts h option
 do
@@ -36,7 +37,8 @@ elif [ $# -eq 1 ]
 then
     # Actually create the file.
     DATESTRING=$(date +"%Y-%m-%d")
-    FILE_PATH=./$FILE_PREFIX$1
+    #FILE_PATH=./$FILE_PREFIX$1
+    FILE_PATH=$1
     FILE_OUTPUT=./output_html/mypubs_$DATESTRING.html
     echo "Creating HTML file from" $FILE_PATH
     perl bib2xhtml.pl -c -r -R -n Sabelhaus -s plain $FILE_PATH $FILE_OUTPUT
