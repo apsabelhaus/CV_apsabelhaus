@@ -26,6 +26,11 @@
 % Some other packages:
 \usepackage{etaremune} % enumerate in reverse. That's silly. Used for publications.
 
+% Credit to... (insert here)
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+\usepackage{soul} % for better underline, \ul
+
 \begin{document}
 
 %-------------------------------------------------------------------------
@@ -98,7 +103,8 @@
 \fontdescript{University of Maryland, College Park}
 
 % On the next line:
-\fontlocation{Minor in Computer Science}
+% \fontlocation{Minor in Computer Science}
+\hspace{0.7cm} \fontsubsection{Minor: Computer Science}
 \hfill  %, have the expected flush-right under the school name
 \fontlocation{May 2012}
 
@@ -179,7 +185,7 @@
 % Adding a quick note about other work I've assisted in writing.
 % This is adjusted so that it's small and indented in.
 \vspace{-0.2cm}
-\hspace{1cm} {\small \it *In addition to these independent awards and grants, Drew has assisted in writing three large multiple-PI proposals (NSF), one large single-PI\\ \hspace{1cm} proposal (NASA), and two small single-PI proposals.}
+% \hspace{1cm} {\small \it *In addition to these independent awards and grants, Drew has assisted in writing three large multiple-PI proposals (NSF), one large single-PI\\ \hspace{1cm} proposal (NASA), and two small single-PI proposals.}
 
 
 %-----------------------------------------------------------------------
@@ -210,29 +216,29 @@
 %\begin{itemize}
 \begin{etaremune}
 
-\item {\fontdescript{Inverse Statics Optimization for Compound Tensegrity Robots.}} \underline{Sabelhaus, A.P.}; Li, A.H.; Sover, K.A.; Madden, J.; Barkan, A.; Agogino, A.K.; Agogino, A.M.; {\it IEEE Robotics and Automation Letters}, To Appear, 2020. Preprint available, arXiv:1808.08252
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, A.H. Li, K.A. Sover, J. Madden, A. Barkan, A.K. Agogino, A.M. Agogino, ``Inverse Statics Optimization for Compound Tensegrity Robots.'' {\it IEEE Robotics and Automation Letters}, 2020. \doi{10.1109/LRA.2020.2983699}
 
-\item {\fontdescript{Model-Predictive Control with Inverse Statics Optimization for Tensegrity Spine Robots.}} \underline{Sabelhaus, A.P.}; Zhao, H.; Zhu, E.; Agogino, A.K.; Agogino, A.M.; {\it IEEE Transactions on Control System Technology}, To Appear, 2020. Preprint available, arXiv:1806.08868
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, H. Zhao, E. Zhu, A.K. Agogino, A.M. Agogino, ``Model-Predictive Control with Inverse Statics Optimization for Tensegrity Spine Robots.'' {\it IEEE Transactions on Control System Technology}, 2020. \doi{10.1109/TCST.2020.2975138}
 
-\item {\fontdescript{Modular Elastic Lattice Platform for Rapid Prototyping of Tensegrity Robots.}} Chen, L-H.;  Daly, M.C.; \underline{Sabelhaus, A.P.}; Janse van Vuuren, L.A.; Garnier, H.J.; Verdugo, M.I.; Tang, E.; Spangenberg, C.U.; Ghahani, F.; Agogino, A.K.; Agogino, A.M.; {\it ASME International Design Engineering Technical Conferences (IDETC) / 41st Mechanisms and Robotics Conference}, Aug 2017.
+\item L.H. Chen, M.C. Daly, \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, H.J. Garnier, M.I. Verdugo, E. Tang, C.U. Spangenberg, F. Ghahani, A.K. Agogino, A.M. Agogino, ``Modular Elastic Lattice Platform for Rapid Prototyping of Tensegrity Robots.'' {\it  ASME International Design Engineering Technical Conferences (IDETC) / 41st Mechanisms and Robotics Conference}, Aug 2017. \doi{10.1115/DETC2017-68264}
 
-\item {\fontdescript{Model-Predictive Control of a Flexible Spine Robot.}} \underline{Sabelhaus, A.P.}; Akella, A.K.; Ahmad, Z.A.; SunSpiral, V.; {\it American Control Conference (ACC),} IEEE, May 2017.
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, A.K. Akella, Z.A. Ahmad, V. SunSpiral, ``Model-Predictive Control of a Flexible Spine Robot.'' {\it American Control Conference (ACC)}, IEEE, May 2017. \doi{10.23919/ACC.2017.7963738}
+
+\item K. Zampaglione, \underline{{\fontdescript{A.P. Sabelhaus}}}, L.H. Chen, A.M. Agogino,  A.K. Agogino, ``DNA-Structured Linear Actuators.'' {\it ASME International Design Engineering Technical Conferences (IDETC) / 40th Mechanisms and Robotics Conference}, Aug 2016. \doi{10.1115/DETC2016-60291}
   
-\item {\fontdescript{DNA-Structured Linear Actuators.}} Zampaglione, K.; \underline{Sabelhaus, A.P.};  Chen, L.;  Agogino, A.M.;  Agogino, A.K.;  {\it ASME International Design Engineering Technical Conferences (IDETC) / 40th Mechanisms and Robotics Conference,} Aug 2016.
-  
-\item {\fontdescript{Mechanism Design and Simulation of the ULTRA Spine, a Tensegrity Robot.}} \underline{Sabelhaus, A.P.}; Ji, H.; Hylton, P.; Madaan, Y.; Yang, C.; Friesen, J.; SunSpiral, V.; Agogino, A.M.; {\it ASME International Design Engineering Technical Conferences (IDETC) / 39th Mechanisms and Robotics Conference,} Aug 2015.
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, H. Ji, P. Hylton, Y. Madaan, C. Yang, J. Friesen, V. SunSpiral, A.M. Agogino, ``Mechanism Design and Simulation of the ULTRA Spine, a Tensegrity Robot.'' {\it ASME International Design Engineering Technical Conferences (IDETC) / 39th Mechanisms and Robotics Conference}, Aug 2015. \doi{10.1115/DETC2015-47583}
 
-\item {\fontdescript{System Design and Locomotion of SUPERball, an Untethered Tensegrity Robot.}} \underline{Sabelhaus, A.P.}; Bruce, J.; Caluwaerts, K.; Manovi, P.; Fallah Firoozi, R.; Dobi, S.; Agogino, A.M.; SunSpiral, V.; {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2015.
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, J. Bruce, K. Caluwaerts, P. Manovi, R.F. Firoozi, S. Dobi, A.M. Agogino, V. SunSpiral, ``System Design and Locomotion of SUPERball, an Untethered Tensegrity Robot.'' {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2015. \doi{10.1109/ICRA.2015.7139590}
 
-\item {\fontdescript{Design and Control of Compliant Tensegrity Robots through Simulation and Hardware Validation.}} Caluwaerts, K.; Despraz, J.; Iscen, A.; \underline{Sabelhaus, A.P.}; Bruce, J.; Schrauwen, B.; SunSpiral, V.;  {\it Journal of the Royal Society Interface,} Sept. 2014.
+\item K. Caluwaerts, J. Despraz, A. Iscen, \underline{{\fontdescript{A.P. Sabelhaus}}}, J. Bruce, B. Schrauwen, V. SunSpiral, ``Design and Control of Compliant Tensegrity Robots through Simulation and Hardware Validation.'' {\it Journal of the Royal Society Interface,} 2014. \doi{10.1098/rsif.2014.0520}
 
-\item {\fontdescript{Hardware Design and Testing of SUPERball, a Modular Tensegrity Robot.}} \underline{Sabelhaus, A.P.}; Bruce, J.; Caluwaerts, K.; Chen, Y.; Lu, D.; Liu, Y.; Agogino, A.K.; SunSpiral, V.; Agogino, A.M.; {\it The 6th World Conference on Structural Control and Monitoring (6WCSCM),} July 2014
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}; J. Bruce, K. Caluwaerts, Y. Chen, D. Lu, Y. Liu, A.K. Agogino, V. SunSpiral, A.M. Agogino, ``Hardware Design and Testing of SUPERball, a Modular Tensegrity Robot.'' {\it The 6th World Conference on Structural Control and Monitoring (6WCSCM),} July 2014.
 
-\item {\fontdescript{SUPERball: Exploring Tensegrities for Planetary Probes.}} Bruce, J.; \underline{Sabelhaus, A.P.}; Chen, Y.; Lu, D.; Morse, K.; Milam, S.; Caluwaerts, K.; Agogino, A.M.; SunSpiral, V.; {\it 12th International Symposium on Artificial Intelligence, Robotics, and Automation in Space (i-SAIRAS),} June 2014
+\item J. Bruce, \underline{{\fontdescript{A.P. Sabelhaus}}}, Y. Chen, D.Lu, K. Morse, S. Milam, K. Caluwaerts, A.M. Agogino, V. SunSpiral, ``SUPERball: Exploring Tensegrities for Planetary Probes.'' {\it 12th International Symposium on Artificial Intelligence, Robotics, and Automation in Space (i-SAIRAS),} June 2014.
 
-\item {\fontdescript{Design and Evolution of a Modular Tensegrity Robot Platform.}} Bruce, J.; Caluwaerts, K.; Iscen, A.; \underline{Sabelhaus, A.P.}; SunSpiral, V.; {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2014
+\item J. Bruce, K. Caluwaerts, A. Iscen, \underline{{\fontdescript{A.P. Sabelhaus}}}, V. SunSpiral, ``Design and Evolution of a Modular Tensegrity Robot Platform.'' {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2014. \doi{10.1109/ICRA.2014.6907361}
 
-\item {\fontdescript{TinyTeRP: A Tiny Terrestrial Robotic Platform with Modular Sensing.}} \underline{Sabelhaus, A.P.}; Mirsky, D.; Hill, L.M.; Bergbreiter, S.; {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2013
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, D. Mirsky, L.M. Hill, S. Bergbreiter, ``TinyTeRP: A Tiny Terrestrial Robotic Platform with Modular Sensing.'' {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2013. \doi{ 10.1109/ICRA.2013.6630933}
 
 
 %\end{tightitemize}
@@ -282,9 +288,9 @@
 
 \begin{etaremune}
 
-\item {\fontdescript{An Untethered Brittle Star Robot for Closed-Loop Underwater Locomotion.}} Patterson, Z.; \underline{Sabelhaus, A.P.}; Chin, K.; Majidi, C. {\it Under Review (Conference).} Preprint available upon request.
+\item Z. Patterson, \underline{{\fontdescript{A.P. Sabelhaus}}}, K. Chin, C. Majidi, ``An Untethered Brittle Star Robot for Closed-Loop Underwater Locomotion.'' {\it Under Review, IEEE/RSJ International Conference on Intelligent Robots and Systems,} 2020. Preprint available upon request.
 
-\item {\fontdescript{Design, Simulation, and Testing of a Flexible Actuated Spine for Quadruped Robots.}} \underline{Sabelhaus, A.P.}; Janse van Vuuren, L.A.; Joshi, A.; Zhu,E.; Garnier, H.J.; Sover, K.A.; Navarro, J.; Agogino, A.K.; SunSpiral, V.; Agogino, A.M.; {\it Preprint Only.} Available, arXiv:1804.06527 
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, A. Joshi, E. Zhu, H.J. Garnier, K.A. Sover, J. Navarro, A.K. Agogino, V. SunSpiral, A.M. Agogino, ``Design, Simulation, and Testing of a Flexible Actuated Spine for Quadruped Robots.'' {\it Preprint Only.} Available, arXiv:1804.06527 
 
 \end{etaremune}  
 
@@ -300,7 +306,7 @@
 
 %\item {\fontdescript{Slack Cables in Cable-Driven Robots: Modeling and Passivity-Based Control.}} \underline{Sabelhaus, A.P.}, Barkan, A.; Sover, K.; Madden, J.; Agogino, A.K.; Agogino, A.M.
 
-\item {\fontdescript{Twisted Helix Linear Actuators.}} \underline{Sabelhaus, A.P.}; Tang, E.; Zampaglione, K.; Chen, L-H.; Agogino, A.M.
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, E. Tang, K. Zampaglione, L.H. Chen, A.M. Agogino, ``Twisted Helix Linear Actuators.''
   
 %\item {\fontdescript{Quadruped Robot Spines Require Torsion for Foot-Lifting.}} \underline{Sabelhaus, A.P.}
 
