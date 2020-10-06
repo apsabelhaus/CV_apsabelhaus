@@ -24,7 +24,7 @@
 \documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4
 
 % Some other packages:
-\usepackage{etaremune} % enumerate in reverse. That's silly. Used for publications.
+\usepackage{etaremune}% enumerate in reverse. That's silly. Used for publications.
 
 % Credit to... (insert here)
 \newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
@@ -74,7 +74,7 @@
 
 % spacing for the next degree
 %\sectionspace
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 %%%%%%%%%% Master's:
 
@@ -93,7 +93,7 @@
 
 % spacing for the next degree
 %\sectionspace
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 %%%%%%%%%% Bachelor's:
 
@@ -103,13 +103,13 @@
 \fontdescript{University of Maryland, College Park}
 
 % On the next line:
-% \fontlocation{Minor in Computer Science}
-\hspace{0.7cm} \fontsubsection{Minor: Computer Science}
+%\hspace{0.7cm} \fontsubsection{Minor: Computer Science}
+{\fontlocation Minor: Computer Science}
 \hfill  %, have the date flush-right under the school name
 \fontlocation{May 2012}
 
 % spacing for the next degree
-\sectionspace
+%\sectionspace
 
 %---------------------------------------------------------------------
 % Professional Experience
@@ -122,51 +122,57 @@
 
 %% IC Postdoc
 
-{\fontdescript{Intelligence Community (IC) Postdoctoral Research Program \hfill Postdoctoral Fellow}}
+%{\fontdescript{Intelligence Community (IC) Postdoctoral Research Program \hfill Postdoctoral Fellow}}
 
-{\location{\hspace{0.3cm} Administered by Oak Ridge Institute for Science and Education (ORISE) \hfill 2020 - Present}}
-{\location{\hspace{0.3cm} Hosted at Carnegie Mellon University, Dept. of Mech. Eng. }}
-{\location{\hspace{0.3cm} Pittsburgh, PA}}
+%{\location{\hspace{0.3cm} Administered by Oak Ridge Institute for Science and Education (ORISE) \hfill 2020 - Present}}
+%{\location{\hspace{0.3cm} Hosted at Carnegie Mellon University, Dept. of Mech. Eng. }}
+%{\location{\hspace{0.3cm} Pittsburgh, PA}}
 
-\vspace{0.4cm}
+%\vspace{0.4cm}
 
 %% CMU
 
-{\fontdescript{Carnegie Mellon University \hfill Visiting Scholar}}
+%{\fontdescript{Carnegie Mellon University \hfill Visiting Scholar}}
 
-{\location{\hspace{0.3cm} Dept. of Mechanical Engineering \hfill 2020 - Present}}
-{\location{\hspace{0.3cm} Soft Machines Lab ({\it{PI: Carmel Majidi}}) \hfill \fontdescript{Postdoctoral Research Associate}}}
-{\location{\hspace{0.3cm} Pittsburgh, PA \hfill 2019 - 2020}}
-%{\location{\hfill Pittsburgh, PA}}
+%{\location{\hspace{0.3cm} Dept. of Mechanical Engineering \hfill 2020 - Present}}
+%{\location{\hspace{0.3cm} Soft Machines Lab ({\it{PI: Carmel Majidi}}) \hfill \fontdescript{Postdoctoral Research Associate}}}
+%{\location{\hspace{0.3cm} Pittsburgh, PA \hfill 2019 - 2020}}
 
-%{\fontdescript{Carnegie Mellon University \hfill Postdoctoral Research Associate}}
-%
-%{\location{\hspace{0.3cm} Dept. of Mechanical Engineering \hfill 2019 - Present}}
-%{\location{\hspace{0.3cm} Soft Machines Lab ({\it{PI: Carmel Majidi}}) \hfill Pittsburgh, PA}}
 
-\vspace{0.4cm}
+{\fontdescript{Carnegie Mellon University \hfill Postdoctoral Research Associate}}
+
+{\location{\hspace{0.3cm} Dept. of Mechanical Engineering, \hfill 2019 - Present}}
+{\location{\hspace{0.3cm} Soft Machines Lab ({\it{PI: Carmel Majidi}}) \hfill Pittsburgh, PA}}
+
+\vspace{0.1cm}
 
 %% NASA, through NSTRF
 
 {\fontdescript{NASA Ames Research Center \hfill Visiting Technologist}}
 
-{\location{\hspace{0.3cm} Intelligent Systems Division \hfill 2015 - 2019}}
-{\location{\hspace{0.3cm} Intelligent Robotics Group and Robust Software Engineering}}
-{\location{\hspace{0.3cm} Moffet Field, CA}}
+{\location{\hspace{0.3cm} Intelligent Systems Division, \hfill 2015 - 2019}}
+{\location{\hspace{0.3cm} Intelligent Robotics Group and Robust Software Engineering \hfill Moffet Field, CA}}
+
+%{\location{\hspace{0.3cm} Intelligent Systems Division \hfill 2015 - 2019}}
+%{\location{\hspace{0.3cm} Intelligent Robotics Group and Robust Software Engineering}}
+%{\location{\hspace{0.3cm} Moffet Field, CA}}
 %{\location{\hspace{0.3cm} Intelligent Robotics Group and Robust Software Engineering \hfill Moffet Field, CA}}
 
-\vspace{0.4cm}
+\vspace{0.1cm}
 
 %% NASA and Berkeley, when I was on the NSF fellowship
 
 {{\fontdescript{University of California, Berkeley \hfill Graduate Research Fellow}}
   
-{\location{\hspace{0.3cm} Dept. of Mechanical Engineering \hfill 2012-2019}}
-{\location{\hspace{0.3cm} Berkeley Emergent Space Tensegrities Lab ({\it{PI: Alice Agogino}})}}
-{\location{\hspace{0.3cm} Berkeley, CA}}
+{\location{\hspace{0.3cm} Dept. of Mechanical Engineering, \hfill 2012-2019}}
+{\location{\hspace{0.3cm} Berkeley Emergent Space Tensegrities Lab ({\it{PI: Alice Agogino}}) \hfill Berkeley, CA}}
+
+%{\location{\hspace{0.3cm} Dept. of Mechanical Engineering \hfill 2012-2019}}
+%{\location{\hspace{0.3cm} Berkeley Emergent Space Tensegrities Lab ({\it{PI: Alice Agogino}})}}
+%{\location{\hspace{0.3cm} Berkeley, CA}}
 
 
-\sectionspace % Some whitespace after the section
+%\sectionspace % Some whitespace after the section
 
 %-----------------------------------------------------------------------
 % Funding
@@ -179,7 +185,7 @@
 
 %\sectionspace
 
-\begin{etaremune}
+\begin{etaremune}[itemsep=0.1cm]
 
 \item {{\fontdescript{Intelligence Community Postdoctoral Research Fellowship.}} Office of the Director of National Intelligence. Title: {\it Rapid Deployment of Hard-to-Control Robots with Optimality Tradeoffs.} Full funding, 2020-2022.}
 
@@ -193,21 +199,25 @@
 
 \end{etaremune}
 
-%  Featured on ABC News: \url{https://abc7news.com/5460516/}
+%-----------------------------------------------------------------------
+% Research Productivity Statistics/Snapshot
+%------------------------------------------------------------------------
 
-\vspace{-0.2cm}
+%\vspace{0.2cm}
+\section{Research Output Snapshot}
+\vspace{0.2cm}
 
 
 %-----------------------------------------------------------------------
 % Publications - now split between journal and conference
 %------------------------------------------------------------------------
 
-\vspace{0.2cm}
+%\vspace{0.2cm}
 \section{Journal Publications}
 \vspace{0.2cm}
 
 % For the publication titles, I use the 'description' font from the class.
-\begin{etaremune}
+\begin{etaremune}[itemsep=0.1cm]
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, A.H. Li, K.A. Sover, J. Madden, A. Barkan, A.K. Agogino, A.M. Agogino, ``Inverse Statics Optimization for Compound Tensegrity Robots.'' {\it IEEE Robotics and Automation Letters}, July 2020. \doi{10.1109/LRA.2020.2983699}
 
@@ -219,12 +229,12 @@
 
 %%%%%%%%% Conferences
 
-\vspace{0.2cm}
+%\vspace{0.2cm}
 \section{Conference Publications}
 \vspace{0.2cm}
 
 % For the publication titles, I use the 'description' font from the class.
-\begin{etaremune}
+\begin{etaremune}[itemsep=0.1cm]
 
 \item Z. Patterson, \underline{{\fontdescript{A.P. Sabelhaus}}}, K. Chin, T. Hellebrekers, C. Majidi, ``An Untethered Brittle Star Robot for Closed-Loop Underwater Locomotion.'' {\it IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),} Oct. 2020.
 
@@ -279,7 +289,7 @@
 
 \vspace{0.2cm}
 
-\begin{etaremune}
+\begin{etaremune}[itemsep=0.1cm]
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, K. Zampaglione, E. Tang, L.H. Chen, A.K. Agogino, A.M. Agogino, ``Double-Helix Linear Actuators.'' {\it Under review, Journal of Mechanical Design (ASME)}.
 
@@ -293,7 +303,7 @@
 
 \vspace{0.2cm}
 
-\begin{etaremune}
+\begin{etaremune}[itemsep=0.1cm]
 
 %\item {\fontdescript{A Smooth Dynamics Model for Cable Slackness in Cable-Driven Robots.}} \underline{Sabelhaus, A.P.} {\it In preparation.}
 
@@ -313,7 +323,7 @@
 
 \vspace{0.2cm}
 
-\begin{etaremune}
+\begin{etaremune}[itemsep=0.1cm]
 
 \item A. Agogino, K. Zampaglione, L.-H. Chen, \underline{{\fontdescript{A.P. Sabelhaus}}}, ``DNA Structured Linear Actuator.'' {\it US Patent No. 10,630,208}, issued April 21, 2020.
 
@@ -332,7 +342,7 @@
 
  % Things not added: talk at Marco Pavone's group at Stanford
 
- \begin{etaremune}
+ \begin{etaremune}[itemsep=0.1cm]
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, ``Tensegrity Spines for Quadruped Robots.'' {\it Workshop on Tensegrity Robotics, IEEE International Conference on Robotics and Automation (ICRA),} May 2019.
 
