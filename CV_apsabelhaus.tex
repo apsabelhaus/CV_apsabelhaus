@@ -25,6 +25,7 @@
 
 % Some other packages:
 \usepackage{etaremune}% enumerate in reverse. That's silly. Used for publications.
+\usepackage{tabularx}
 
 % Credit to... (insert here)
 \newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
@@ -128,16 +129,6 @@
 %{\location{\hspace{0.3cm} Hosted at Carnegie Mellon University, Dept. of Mech. Eng. }}
 %{\location{\hspace{0.3cm} Pittsburgh, PA}}
 
-%\vspace{0.4cm}
-
-%% CMU
-
-%{\fontdescript{Carnegie Mellon University \hfill Visiting Scholar}}
-
-%{\location{\hspace{0.3cm} Dept. of Mechanical Engineering \hfill 2020 - Present}}
-%{\location{\hspace{0.3cm} Soft Machines Lab ({\it{PI: Carmel Majidi}}) \hfill \fontdescript{Postdoctoral Research Associate}}}
-%{\location{\hspace{0.3cm} Pittsburgh, PA \hfill 2019 - 2020}}
-
 
 {\fontdescript{Carnegie Mellon University \hfill Postdoctoral Research Associate}}
 
@@ -206,7 +197,19 @@
 %\vspace{0.2cm}
 \section{Research Output Snapshot}
 \vspace{0.2cm}
+ 
+\begin{tabularx}{1\textwidth}{ p{3cm} | p{3cm} | p{3cm} | X | X }
+\multicolumn{3}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
+\hline
+& Overall: & 1st-Author: & & \\
+Conference: & X & M & Y*, Z$^\dag$ & A*, B$^\dag$ \\
+Journal: & Y & N & & \\
+Total: & \textbf{R} & Q
+\end{tabularx}
 
+% some explanations
+\vspace{0.1cm}
+{\small \it *Via Google Scholar. $^\dag$Via Web of Science.}
 
 %-----------------------------------------------------------------------
 % Publications - now split between journal and conference
