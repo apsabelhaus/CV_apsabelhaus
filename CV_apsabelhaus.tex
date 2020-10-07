@@ -26,11 +26,17 @@
 % Some other packages:
 \usepackage{etaremune}% enumerate in reverse. That's silly. Used for publications.
 \usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
 
 % Credit to... (insert here)
 \newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
 \newcommand\doi[1]{doi:\doilink{#1}}
 \usepackage{soul} % for better underline, \ul
+
+% And for adjusting tables:
+%\newcommand\Tstrut{\rule{0.1pt}{0.1cm}}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
 
 \begin{document}
 
@@ -105,7 +111,7 @@
 
 % On the next line:
 %\hspace{0.7cm} \fontsubsection{Minor: Computer Science}
-{\fontlocation Minor: Computer Science}
+{\fontlocation {\it Minor in Computer Science}}
 \hfill  %, have the date flush-right under the school name
 \fontlocation{May 2012}
 
@@ -117,6 +123,7 @@
 %---------------------------------------------------------------------
 
 % List my NASA stuff here - technically happened contemporanously but...
+\vspace{0.1cm}
 \section{Professional Experience}
 
 \vspace{0.2cm}
@@ -130,7 +137,7 @@
 %{\location{\hspace{0.3cm} Pittsburgh, PA}}
 
 
-{\fontdescript{Carnegie Mellon University \hfill Postdoctoral Research Associate}}
+{\fontdescript{Carnegie Mellon University \hfill Postdoctoral Research Fellow}}
 
 {\location{\hspace{0.3cm} Dept. of Mechanical Engineering, \hfill 2019 - Present}}
 {\location{\hspace{0.3cm} Soft Machines Lab ({\it{PI: Carmel Majidi}}) \hfill Pittsburgh, PA}}
@@ -170,6 +177,7 @@
 %------------------------------------------------------------------------
 
 % To-Do: have I helped win any other grants?
+\vspace{0.1cm}
 \section{Grants + Funding}
 
 \vspace{0.2cm}
@@ -184,7 +192,7 @@
   
 \item {{\fontdescript{CITRIS Tech for Social Good Development Grant.}} University of California Center for Information Technology Research in the Interest of Society (CITRIS). Title: {\it Laika, The Robot Transport for Disaster Relief.}  Block grant, 2018.}
 
-\item {{\fontdescript{Markowski-Leach Foundation Scholarship Award.}} {\it Awarded to LGBTQ individuals at San Francisco Bay Area institutions who ``are likely to make a substantial contribution to society.''} 2013-2014, re-awarded 2016-2018.\\ Currently the only repeated awardee on record.}
+\item {{\fontdescript{Markowski-Leach Foundation Award.}} {\it Awarded to LGBTQ individuals at San Francisco Bay Area institutions who ``are likely to make a substantial contribution to society.''} 2013-2014, re-awarded 2016-2018.\\ Currently the only repeated awardee on record.}
 
 \item {{\fontdescript{NSF Graduate Research Fellowship.}} National Science Foundation. Full funding, 2012-2015.}
 
@@ -196,20 +204,22 @@
 
 %\vspace{0.2cm}
 \section{Research Output Snapshot}
-\vspace{0.2cm}
+%\vspace{0.1cm}
  
+\renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{1\textwidth}{ p{3cm} | p{3cm} | p{3cm} | X | X }
-\multicolumn{3}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
+\multicolumn{3}{ p{9cm} | }{ {\fontdescript{\large Peer-Reviewed Publication Count:}} } & {\fontdescript{\large Total Citations:}} & {\fontdescript{\large h-index:}} \\
 \hline
-& Overall: & 1st-Author: & & \\
-Conference: & X & M & Y*, Z$^\dag$ & A*, B$^\dag$ \\
-Journal: & Y & N & & \\
-Total: & \textbf{R} & Q
+						& \large 1st-Author:\Tstrut 	& \large Any Author: 	& \multirow{3}{*}{\huge 527*  (191$^\dag$) \Tstrut}	& \multirow{3}{*}{\huge 9*  (4$^\dag$) \Tstrut} \\
+\large Conference: \Tstrut	& \Large 5 					& \Large 10 			& 													&  \\
+\large Journal: 			& \Large 2					& \Large 3 			& 													& \\
+\large Total: 				& \Large 7 					& \Large 13			&													&
 \end{tabularx}
 
 % some explanations
-\vspace{0.1cm}
-{\small \it *Via Google Scholar. $^\dag$Via Web of Science.}
+\vspace{0.2cm}
+{\small \it *Via Google Scholar, \href{https://scholar.google.com/citations?user=ze69yEMAAAAJ\&hl=en}{https://scholar.google.com/citations?user=ze69yEMAAAAJ\&hl=en}. \\
+$^\dag$Via Web of Science, \href{https://publons.com/researcher/1275784/andrew-p-sabelhaus/}{https://publons.com/researcher/1275784/andrew-p-sabelhaus/}.}
 
 %-----------------------------------------------------------------------
 % Publications - now split between journal and conference
@@ -294,6 +304,8 @@ Total: & \textbf{R} & Q
 
 \begin{etaremune}[itemsep=0.1cm]
 
+\item Z. Ren, X. Huang, M. Zarepoor, \underline{{\fontdescript{A.P. Sabelhaus}}}, C. Majidi, ``Shape Memory Alloy (SMA) Actuator with Embedded Liquid Metal Curvature Sensor for Closed-Loop Control." {\it Under Review, Frontiers in Robotics and AI}.
+
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, K. Zampaglione, E. Tang, L.H. Chen, A.K. Agogino, A.M. Agogino, ``Double-Helix Linear Actuators.'' {\it Under review, Journal of Mechanical Design (ASME)}.
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, A. Joshi, E. Zhu, H.J. Garnier, K.A. Sover, J. Navarro, A.K. Agogino, V. SunSpiral, A.M. Agogino, ``Design, Simulation, and Testing of a Flexible Actuated Spine for Quadruped Robots.'' {\it Preprint Only.} Available, arXiv:1804.06527 
@@ -304,7 +316,7 @@ Total: & \textbf{R} & Q
   
 \section{In-Preparation Publications}
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \begin{etaremune}[itemsep=0.1cm]
 
@@ -316,6 +328,10 @@ Total: & \textbf{R} & Q
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, ``Stability and Control Design for Lagrangian Systems with Statically-Conservative Forces.''
 
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, K. Chin, Z. Patterson, C. Majidi, ``Fast Online Trajectory Optimization for Soft Robot Locomotion via Learned Dynamics Models."
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, S. Alvares, Z. Patterson, K. Chin, X. Huang, C. Majidi, ``Onboard Pose Estimation for Articulated Walking Soft Robots."
+
 \end{etaremune}
 
 %-----------------------------------------------------
@@ -324,7 +340,7 @@ Total: & \textbf{R} & Q
 
 \section{Patents}
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \begin{etaremune}[itemsep=0.1cm]
 
@@ -347,13 +363,15 @@ Total: & \textbf{R} & Q
 
  \begin{etaremune}[itemsep=0.1cm]
 
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, C. Majidi, ``Gaussian Process Models for Soft Robot Locomotion." {\it Workshop on Application-Oriented Modeling and Control of Soft Robots, IEEE/RSJ International Conference on Intelligent Robots and Systems}, Oct. 2020.
+
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, ``Tensegrity Spines for Quadruped Robots.'' {\it Workshop on Tensegrity Robotics, IEEE International Conference on Robotics and Automation (ICRA),} May 2019.
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, ``Tensegrity Spines for Quadruped Robots.'' {\it CMU Locomotion Seminar}, Carnegie Mellon University, Feb. 2019.
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, ``Laika and Belka: Walking Robots with Flexible Spines.'' {\it Workshop on Autonomy for Future NASA Science Missions}, National Aeronautics and Space Administration, Oct. 2018.
 
-\item \underline{{\fontdescript{A.P. Sabelhaus}}}, ``Inverse Kinematics for Tensegrity Soft Robot Control: Existence and Optimality.'' {\it Soft Robotics Modeling and Control Workshop, IEEE/RSJ International Conference on Intelligent Robots and Systems}, Oct. 2018.
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, A.K. Agogino, ``Inverse Kinematics for Tensegrity Soft Robot Control: Existence and Optimality.'' {\it Soft Robotics Modeling and Control Workshop, IEEE/RSJ International Conference on Intelligent Robots and Systems}, Oct. 2018.
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, ``Laika, The Four-Legged Robot with a Flexible Spine.'' {\it NASA Space Technology Day-On-The-Hill}, United States Congress / House of Representatives, Nov. 2017.
 
@@ -379,11 +397,11 @@ Total: & \textbf{R} & Q
 
 \section{Reviewer for Journals and Conferences}
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 Drew has served as a reviewer for the following journals and conferences:
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \begin{tightitemize}
 
