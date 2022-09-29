@@ -19,7 +19,7 @@
 % Important notes:
 % This template needs to be compiled with XeLaTeX.
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% 
 % TO-DO
@@ -30,7 +30,6 @@
 %	- DNA actuators patent was granted
 % 	- update/confirm presentations
 %	- update under review and in prep
-%	- add Boston University
 
 \documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4
 
@@ -43,6 +42,8 @@
 % Credit to... (insert here)
 \newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
 \newcommand\doi[1]{doi:\doilink{#1}}
+\newcommand\arxivlink[1]{\href{https://arxiv.org/abs/#1}{#1}}
+\newcommand\arxiv[1]{arXiv:\arxivlink{#1}}
 \usepackage{soul} % for better underline, \ul
 
 % And for adjusting tables:
@@ -230,14 +231,23 @@
 \section{Research Output Snapshot}
 \vspace{-0.3cm}
  
+%\renewcommand{\arraystretch}{1.2}
+%\begin{tabularx}{1\textwidth}{ p{3cm} | p{3cm} | p{3cm} | X | X }
+%\multicolumn{3}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
+%\hline
+%						& 1st-Author or PI:\Tstrut 	& All: 	& \multirow{3}{*}{\huge 813*  (343$^\dag$) \Tstrut}	& \multirow{3}{*}{\huge 13*  (7$^\dag$) \Tstrut} \\
+%Conference: \Tstrut	& \Large 7 					& \Large 12 			& 													&  \\
+%Journal: 			& \Large 4					& \Large 9 			& 													& \\
+%Total: 				& \Large 11 					& \Large 21			&													&
+%\end{tabularx}
+
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{1\textwidth}{ p{3cm} | p{3cm} | p{3cm} | X | X }
-\multicolumn{3}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
+\begin{tabularx}{1\textwidth}{ p{3cm} | p{2cm} | p{2cm} | p{2cm} | X | X }
+\multicolumn{4}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
 \hline
-						& 1st-Author or PI:\Tstrut 	& All: 	& \multirow{3}{*}{\huge 813*  (343$^\dag$) \Tstrut}	& \multirow{3}{*}{\huge 13*  (7$^\dag$) \Tstrut} \\
-Conference: \Tstrut	& \Large 7 					& \Large 12 			& 													&  \\
-Journal: 			& \Large 4					& \Large 9 			& 													& \\
-Total: 				& \Large 11 					& \Large 21			&													&
+					& Conference:\Tstrut 	& Journal: 		& Total: 		& \multirow{3}{*}{\huge 834*  (346$^\dag$) \Tstrut}	& \multirow{3}{*}{\huge 13*  (7$^\dag$) \Tstrut} \\
+1st-Author or PI: \Tstrut	& \Large 7 			& \Large 4 		& \Large 12	&										&  \\
+All: 					& \Large 12		& \Large 9 		& \Large 21	&										& \\
 \end{tabularx}
 
 % some explanations
@@ -346,9 +356,13 @@ $^\dag$Via Web of Science, \href{https://www.webofscience.com/wos/author/record/
 
 \begin{etaremune}[itemsep=0.1cm]
 
-\item \underline{{\fontdescript{A.P. Sabelhaus}}}, Z. Patterson, A. Wertz, C. Majidi, ``Safe Supervisory Control of Soft Robot Actuators.'' {\it Under Review}. Available, arXiv:2208.01547
+\item R. Jing, M. Anderson, M. Ianus-Valdivia, A. Akber, C. Majidi, \myname, ``Safe Balancing Control of a Soft Legged Robot.'' {\it Under Review}. \arxiv{2209.13715}
 
-\item \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, A. Joshi, E. Zhu, H.J. Garnier, K.A. Sover, J. Navarro, A.K. Agogino, V. SunSpiral, A.M. Agogino, ``Design, Simulation, and Testing of a Flexible Actuated Spine for Quadruped Robots.'' {\it Preprint Only.} Available, arXiv:1804.06527 
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, Z. Patterson, A. Wertz, C. Majidi, ``Safe Supervisory Control of Soft Robot Actuators.'' {\it Under Review}. \arxiv{2208.01547}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, A. Joshi, E. Zhu, H.J. Garnier, K.A. Sover, J. Navarro, A.K. Agogino, V. SunSpiral, A.M. Agogino, ``Design, Simulation, and Testing of a Flexible Actuated Spine for Quadruped Robots.'' {\it Preprint Only.} \arxiv{1804.06527}
+
+%Available, arXiv:1804.06527 
 
 \end{etaremune}  
 
@@ -359,8 +373,6 @@ $^\dag$Via Web of Science, \href{https://www.webofscience.com/wos/author/record/
 \vspace{0.1cm}
 
 \begin{etaremune}[itemsep=0.1cm]
-
-\item R. Jing, M. Anderson, M. Ianus-Valdivia, A. Akber, C. Majidi, \myname, ``Safe Balancing Control of a Soft Legged Robot.''
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, D. Macri, A. Joshi, K.A. Sover, Z. Rodriquez, J. Navarro, A. Bronars, A.H. Li, A. Barkan, A. Zhang, A.K. Agogino, A.M. Agogino, ``Tensegrity Spines for Quadruped Robots.''
 
@@ -455,6 +467,12 @@ $^\dag$Via Web of Science, \href{https://www.webofscience.com/wos/author/record/
 
 \begin{itemize}
 
+\item {{\fontdescript{Editorial Work: Associate Editor} }
+\vspace{0.1cm}
+\begin{tightitemize}
+\item {\it IEEE International Conference on Robotics and Automation (ICRA)}: Humanoids and Animaloids topic area. 2023
+\end{tightitemize}}
+
 \item {{\fontdescript{Editorial Work: Guest Editor} }
 \vspace{0.1cm}
 \begin{tightitemize}
@@ -513,9 +531,9 @@ $^\dag$Via Web of Science, \href{https://www.webofscience.com/wos/author/record/
 
 \begin{itemize}
 
-\item {{\fontdescript{Mentorship of PhD students.}} Boston University: 2 students. Diversity: 1/2 identify as minority or under-represented, 50\%.}
+\item {{\fontdescript{Mentorship of PhD students.}} Boston University: 3 students. Diversity: 2/3 identify as minority or under-represented, 66\%.}
 
-\item {{\fontdescript{Mentorship of master's students.}} Boston University: 1 student. Diversity: 1/1 identify as minority or under-represented. UC Berkeley Master of Engineering (M.Eng): 15 students. Diversity: 8/15 identify as minority or under-represented, 53\%.}
+\item {{\fontdescript{Mentorship of master's students.}} Boston University: 2 students. Diversity: 2/2 identify as minority or under-represented. UC Berkeley Master of Engineering (M.Eng): 15 students. Diversity: 8/15 identify as minority or under-represented, 53\%.}
 
 \item {{\fontdescript{Mentorship of undergraduate students.}} Boston University, UC Berkeley, and Carnegie Mellon University, 20 students. Diversity: 14/20 identify as minority or under-represented, 70\%.}
 
@@ -597,7 +615,8 @@ $^\dag$Via Web of Science, \href{https://www.webofscience.com/wos/author/record/
 %\vspace{-0.2cm}
 
 % some explanations
-\hspace{1cm} {\small $^\dag$Out in Science, Technology, Engineering, and Mathematics (oSTEM) is a national organization for LGBTQ science and engineering students, \href{www.ostem.org}{www.ostem.org}}
+%\hspace{1cm} {\small $^\dag$Out in Science, Technology, Engineering, and Mathematics (oSTEM) is a national organization for LGBTQ science and engineering students, \href{www.ostem.org}{www.ostem.org}}
+{\small $^\dag$Out in Science, Technology, Engineering, and Mathematics (oSTEM) is a national organization for LGBTQ science and engineering students, \href{www.ostem.org}{www.ostem.org}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
