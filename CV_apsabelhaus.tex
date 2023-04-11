@@ -53,7 +53,7 @@
 
 \begin{document}
 
-\setcounter{page}{16}
+\setcounter{page}{22}
 
 %-------------------------------------------------------------------------
 %	TITLE SECTION
@@ -62,9 +62,9 @@
 \lastupdated % Print the Last Updated text at the top right
 
 \raggedright{ % left-align the heading
-\namesection{Andrew P.}{Sabelhaus}{ % Your name
+\namesection{Andrew }{Sabelhaus*}{ % Your name
 \urlstyle{same}\url{www.apsabelhaus.com} | 
-\href{mailto:asabelha@bu.edu}{asabelha@bu.edu} | (617) 358-4500 | {\it he, him, his}}
+\href{mailto:asabelha@bu.edu}{asabelha@bu.edu} | (617) 358-4500 | {\it he, him, his.                                   }  \underline{\fontsubsection{*United States Citizen.}}}
 }
 
   
@@ -75,6 +75,7 @@
 % I'm writing this out manually instead of using the nice section headers.
 % TO-DO: make this into new commands to make easy.
 
+\vspace{-0.1cm}
 \section{Education}
 \vspace{0.2cm}
 
@@ -137,7 +138,7 @@
 %---------------------------------------------------------------------
 
 % List my NASA stuff here - technically happened contemporanously but...
-\vspace{0.2cm}
+\vspace{0.1cm}
 \section{Appointments}
 
 \vspace{0.1cm}
@@ -200,46 +201,57 @@
 %------------------------------------------------------------------------
 
 % To-Do: have I helped win any other grants?
-\vspace{0.2cm}
-\section{Funding + Awards}
-
-\vspace{0.1cm}
-
-%\sectionspace
-
-\begin{etaremune}[itemsep=0.05cm]
-
-\item {{\fontdescript{NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI), Standard Grant.}} National Science Foundation. Title: {\it Discrete Simulation of Flexible Structures and Soft Robots.} \$169,987. 2022-2025.}
-
-\item {{\fontdescript{Intelligence Community Postdoctoral Research Fellowship.}} Office of the Director of National Intelligence. Title: {\it Rapid Deployment of Hard-to-Control Robots with Optimality Tradeoffs.} Full funding, 2020-2022.}
-
-\item {{\fontdescript{NASA Space Technology Research Fellowship.}} National Aeronautics and Space Administration. Title: {\it Trajectory Tracking in Nonlinear, High-Order, Underactuated Robotic Systems.} Full funding, 2015-2019.}
-  
-\item {{\fontdescript{CITRIS Tech for Social Good Development Grant.}} University of California Center for Information Technology Research in the Interest of Society (CITRIS). Title: {\it Laika, The Robot Transport for Disaster Relief.}  Block grant, 2018.}
-
-\item {{\fontdescript{Markowski-Leach Foundation Award.}} {\it Awarded to LGBTQ individuals at San Francisco Bay Area institutions who ``are likely to make a substantial contribution to society.''} 2013-2014, re-awarded 2016-2018.}
-%\\ Currently the only repeated awardee on record.}
-
-\item {{\fontdescript{NSF Graduate Research Fellowship.}} National Science Foundation. Full funding, 2012-2015.}
-
-\end{etaremune}
+%\vspace{0.2cm}
+%\section{Funding + Awards}
+%
+%\vspace{0.1cm}
+%
+%%\sectionspace
+%
+%\begin{etaremune}[itemsep=0.05cm]
+%
+%\item {{\fontdescript{NRO Architecture After Next, Research Grant.}} National Reconnaissance Office. Title: {\it Soft Robot Proprioception with Space-Compatible Artificial Muscles.} \$210,459. 2023-2024.}
+%
+%\item {{\fontdescript{NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI), Standard Grant.}} National Science Foundation. Title: {\it Discrete Simulation of Flexible Structures and Soft Robots.} \$169,987. 2022-2025.}
+%
+%\item {{\fontdescript{Intelligence Community Postdoctoral Research Fellowship.}} Office of the Director of National Intelligence. Title: {\it Rapid Deployment of Hard-to-Control Robots with Optimality Tradeoffs.} Full funding, 2020-2022.}
+%
+%\item {{\fontdescript{NASA Space Technology Research Fellowship.}} National Aeronautics and Space Administration. Title: {\it Trajectory Tracking in Nonlinear, High-Order, Underactuated Robotic Systems.} Full funding, 2015-2019.}
+%  
+%\item {{\fontdescript{CITRIS Tech for Social Good Development Grant.}} University of California Center for Information Technology Research in the Interest of Society (CITRIS). Title: {\it Laika, The Robot Transport for Disaster Relief.}  Block grant, 2018.}
+%
+%%\item {{\fontdescript{Markowski-Leach Foundation Award.}} {\it Awarded to LGBTQ individuals at San Francisco Bay Area institutions who ``are likely to make a substantial contribution to society.''} 2013-2014, re-awarded 2016-2018.}
+%%\\ Currently the only repeated awardee on record.}
+%
+%\item {{\fontdescript{NSF Graduate Research Fellowship.}} National Science Foundation. Full funding, 2012-2015.}
+%
+%\end{etaremune}
 
 %-----------------------------------------------------------------------
 % Research Productivity Statistics/Snapshot
 %------------------------------------------------------------------------
 
-%\vspace{0.2cm}
+\vspace{0.2cm}
 \section{Research Output Snapshot}
 \vspace{-0.3cm}
  
+%\renewcommand{\arraystretch}{1.2}
+%\begin{tabularx}{1\textwidth}{ p{3cm} | p{3cm} | p{3cm} | X | X }
+%\multicolumn{3}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
+%\hline
+%						& 1st-Author or PI:\Tstrut 	& All: 	& \multirow{3}{*}{\huge 932*  (396$^\dag$) \Tstrut}	& \multirow{3}{*}{\huge 14*  (9$^\dag$) \Tstrut} \\
+%Conference: \Tstrut	& \Large 7 					& \Large 12 			& 													&  \\
+%Journal: 			& \Large 4					& \Large 9 			& 													& \\
+%Total: 				& \Large 11 					& \Large 21			&													&
+%\end{tabularx}
+
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{1\textwidth}{ p{3cm} | p{3cm} | p{3cm} | X | X }
-\multicolumn{3}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
+\begin{tabularx}{1\textwidth}{ p{3cm} | p{2cm} | p{2cm} | p{2cm} | X | X }
+\multicolumn{4}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
 \hline
-						& 1st-Author or PI:\Tstrut 	& All: 	& \multirow{3}{*}{\huge 813*  (343$^\dag$) \Tstrut}	& \multirow{3}{*}{\huge 13*  (7$^\dag$) \Tstrut} \\
-Conference: \Tstrut	& \Large 7 					& \Large 12 			& 													&  \\
-Journal: 			& \Large 4					& \Large 9 			& 													& \\
-Total: 				& \Large 11 					& \Large 21			&													&
+					& Conference:\Tstrut 	& Journal: 		& Total: 		& \multirow{3}{*}{\huge 932*  (396$^\dag$) \Tstrut}	& \multirow{3}{*}{\huge 15*  (9$^\dag$) \Tstrut} \\
+1st-Author or PI: \Tstrut	& \Large 7 			& \Large 4 		& \Large 12	&										&  \\
+All: 					& \Large 12		& \Large 10 		& \Large 22	&										& \\
 \end{tabularx}
 
 % some explanations
@@ -253,49 +265,87 @@ $^\dag$Via Web of Science, \href{https://www.webofscience.com/wos/author/record/
 % Publications - now split between journal and conference
 %------------------------------------------------------------------------
 
-%\vspace{0.2cm}
-\section{Most Recent Publications}
+\vspace{0.2cm}
+\section{Publications Related to Proposed Project}
 \vspace{0.2cm}
 
 % For the publication titles, I use the 'description' font from the class.
-\begin{etaremune}[itemsep=0.1cm]
+%\begin{etaremune}[itemsep=0.1cm]
 
+\begin{enumerate}\setlength{\itemsep=0.1cm}
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, Z. Patterson, A. Wertz, C. Majidi, ``Safe Supervisory Control of Soft Robot Actuators.'' {\it Under Review, Soft Robotics}. Available, arXiv:2208.01547
 
-\item X. Huang, Z.J. Patterson, \myname, W. Huang, K. Chin, Z. Ren, M.K. Jawed, C. Majidi, ``Design and Closed Loop Motion Planning of an Untethered Swimming Soft Robot using 2D Discrete Elastic Rods Simulations,'' {\it Advanced Intelligent Systems}, To Appear.
+\item X. Huang, Z.J. Patterson, \myname, W. Huang, K. Chin, Z. Ren, M.K. Jawed, C. Majidi, ``Design and Closed Loop Motion Planning of an Untethered Swimming Soft Robot using 2D Discrete Elastic Rods Simulations,'' {\it Advanced Intelligent Systems}, 2200163, 2022. \doi{10.1002/aisy.202200163}.
 
 \item \myname, R.K. Mehta, A. Wertz, C. Majidi, ``In-Situ Sensing and Dynamics Predictions for Electrothermally-Actuated Soft Robot Limbs,'' {\it Frontiers in Robotics and AI}, Vol. 9, May 2022. \doi{10.3389/frobt.2022.888261}
 
 \item M. Zadan, D.K. Patel, \underline{{\fontdescript{A.P. Sabelhaus}}}, J.Liao, A. Wertz, L. Yao, C. Majidi, ``Liquid Crystal Elastomer with Integrated Soft Thermoelectrics for Shape Memory Actuation and Energy Harvesting,'' {\it Advanced Materials}, April 2022. \doi{10.1002/adma.202200857}
 
-\item A. Wertz*, \underline{{\fontdescript{A.P. Sabelhaus}}}*, C. Majidi, ``Trajectory Optimization for Thermally-Actuated Soft Planar Robot Limbs,'' {\it IEEE International Conference on Soft Robotics (RoboSoft)}, April 2022. *Equal Contribution. \doi{10.1109/RoboSoft54090.2022.9762226}
+\item A. Wertz*, \underline{{\fontdescript{A.P. Sabelhaus}}}, C. Majidi, ``Trajectory Optimization for Thermally-Actuated Soft Planar Robot Limbs,'' {\it IEEE International Conference on Soft Robotics (RoboSoft)}, April 2022. \doi{10.1109/RoboSoft54090.2022.9762226}
 
 \item Z.J. Patterson, \underline{{\fontdescript{A.P. Sabelhaus}}}, C. Majidi, ``Robust Control of a Multi-Axis Shape Memory Alloy-Driven Soft Manipulator,'' {\it IEEE Robotics and Automatics Letters}, April 2022. \doi{10.1109/LRA.2022.3143256}
 
-\item \underline{{\fontdescript{A.P. Sabelhaus}}}, K. Zampaglione, E. Tang, L.H. Chen, A.K. Agogino, A.M. Agogino, ``Double-Helix Linear Actuators.'' {\it Journal of Mechanical Design (ASME)}, Vol. 143, Issue 10, Oct. 2021. \doi{10.1115/1.4050739}
-
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, C.Majidi, ``Gaussian Process Dynamics Models for Soft Robots with Shape Memory Actuators.'' {\it IEEE International Conference on Soft Robotics (RoboSoft)}, April 2021.  \doi{10.1109/RoboSoft51838.2021.9479294}
-
-\item Z. Ren, X. Huang, M. Zarepoor, \underline{{\fontdescript{A.P. Sabelhaus}}}, C. Majidi, ``Shape Memory Alloy (SMA) Actuator with Embedded Liquid Metal Curvature Sensor for Closed-Loop Control." {\it Frontiers in Robotics and AI}, Vol. 8, Mar. 2021. \doi{10.3389/frobt.2021.599650}
 
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, H. Zhao, E. Zhu, A.K. Agogino, A.M. Agogino, ``Model-Predictive Control with Inverse Statics Optimization for Tensegrity Spine Robots.'' {\it IEEE Transactions on Control System Technology}, Vol. 29, Issue 1, Jan. 2021. \doi{10.1109/TCST.2020.2975138}
 
-\item \underline{{\fontdescript{A.P. Sabelhaus}}}, A.H. Li, K.A. Sover, J. Madden, A. Barkan, A.K. Agogino, A.M. Agogino, ``Inverse Statics Optimization for Compound Tensegrity Robots.'' {\it IEEE Robotics and Automation Letters}, July 2020. \doi{10.1109/LRA.2020.2983699}
-
 \item Z. Patterson, \underline{{\fontdescript{A.P. Sabelhaus}}}, K. Chin, T. Hellebrekers, C. Majidi, ``An Untethered Brittle Star Robot for Closed-Loop Underwater Locomotion.'' {\it IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),} Oct. 2020. \doi{10.1109/IROS45743.2020.9341008}
 
-\item \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, A. Joshi, E. Zhu, H.J. Garnier, K.A. Sover, J. Navarro, A.K. Agogino, V. SunSpiral, A.M. Agogino, ``Design, Simulation, and Testing of a Flexible Actuated Spine for Quadruped Robots.'' {\it Preprint Only}, 2018 Available, arXiv:1804.06527 
-
-\item L.H. Chen, M.C. Daly, \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, H.J. Garnier, M.I. Verdugo, E. Tang, C.U. Spangenberg, F. Ghahani, A.K. Agogino, A.M. Agogino, ``Modular Elastic Lattice Platform for Rapid Prototyping of Tensegrity Robots.'' {\it  ASME International Design Engineering Technical Conferences (IDETC) / 41st Mechanisms and Robotics Conference}, Aug 2017. \doi{10.1115/DETC2017-68264}
-
-\item \underline{{\fontdescript{A.P. Sabelhaus}}}, A.K. Akella, Z.A. Ahmad, V. SunSpiral, ``Model-Predictive Control of a Flexible Spine Robot.'' {\it American Control Conference (ACC)}, IEEE, May 2017. \doi{10.23919/ACC.2017.7963738}
-  
-\item \underline{{\fontdescript{A.P. Sabelhaus}}}, H. Ji, P. Hylton, Y. Madaan, C. Yang, J. Friesen, V. SunSpiral, A.M. Agogino, ``Mechanism Design and Simulation of the ULTRA Spine, a Tensegrity Robot.'' {\it ASME International Design Engineering Technical Conferences (IDETC) / 39th Mechanisms and Robotics Conference}, Aug 2015. \doi{10.1115/DETC2015-47583}
-
 \item \underline{{\fontdescript{A.P. Sabelhaus}}}, J. Bruce, K. Caluwaerts, P. Manovi, R.F. Firoozi, S. Dobi, A.M. Agogino, V. SunSpiral, ``System Design and Locomotion of SUPERball, an Untethered Tensegrity Robot.'' {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2015. \doi{10.1109/ICRA.2015.7139590}
+\end{enumerate}
+%\end{etaremune}
 
-\end{etaremune}
+%\vspace{0.2cm}
+\vspace{-0.2cm}
+\section{Synergistic Activities}
+\vspace{0.2cm}
 
+\begin{enumerate}\setlength{\itemsep=0.1cm}
+\item  {\fontdescript{Mentorship, Research Supervision, Student Advising:}}
+\begin{enumerate}\setlength{\itemsep=0cm}
+\item Graduate students: Boston University,  Ph.D. - 3 students, Masters -  2 students. Previous institutions: Masters (Professional) - 10 students.
+\item Undergraduate researchers: Boston University - 2 students. Previous institutions: 16 students.
+\item Current and former mentees who self-identified as under-represented (commonly women, URM, LGBTQ+ students, disabilities, etc.): 12/18 = 66\% undergraduate, 8/15 = 53\% graduate, 20/33 = 61\% total.
+\end{enumerate}
+
+\item  {\fontdescript{University and Professional Service:}}
+\begin{enumerate}\setlength{\itemsep=0cm}
+\item NSF Panel Reviewer, 2022-2023
+\item Service at Boston University: Dept. of Mechanical Engineering, Organizer of PhD Fellowships Writing Group, 2022. Division of Systems Engineering: Graduate Admissions Committee, 2022-2023.
+\item Service at UC Berkeley: Dept. of Mechanical Engineering, Graduate Peer Advisor 2014-2015, Diversity and Inclusion Committee, 2015-2019, Grad Student Advisors to Faculty Search Committees: 2017 - 2019.
+\item Professional Service: American Society of Mechanical Engineers (ASME) Diversity and Inclusion Strategic Committee, 2015-2017. Revised diversity and inclusion statements to
+accommodate LGBTQ+ and transgender ASME members. American Society of Engineering Education (ASEE), LGBTQ+ Virtual Community of Practice, member, 2018-present.
+\end{enumerate}
+
+\item  {\fontdescript{Editorial Work and Peer Review:}}
+\begin{enumerate}\setlength{\itemsep=0cm}
+\item Associate Editor, IEEE International Conference on Robotics and Automation (ICRA) 2023, Humanoids and Animaloids section
+\item Guest Editor, Frontiers in Robotics and AI Special Topic on Materials, Design, Modeling, and Control of Soft Robotic Artificial Muscles, 2022
+\item Peer review for Journals: x16 from 2017-2023. Peer review for conferences: x14 from 2016-2022.
+\end{enumerate}
+
+\item  {\fontdescript{Teaching:}}
+\begin{enumerate}\setlength{\itemsep=0cm}
+\item Instructor, Boston University, 2022-2023: Computational Linear Algebra. Course evaluations, Overall Instructor Rating: 4.54/5.0 
+\item Graduate Student Instructor (GSI), University of California Berkeley, 2018: Design of Microprocessor-Based Mechanical Systems. Course evaluations, overall metrics: Total Effectiveness of Instructor, 4.7/5.0 undergraduate students, 4.88/5.0 graduate students.
+\item Outstanding Graduate Student Instructor Award, University of California Berkeley, 2018-2019
+\end{enumerate}
+
+\item  {\fontdescript{Outreach:}}
+\begin{enumerate}\setlength{\itemsep=0cm}
+\item NASA Downlink Day with Astronaut Bob Hines at Boston University, 2022: hosted groups of under-represented K-12 students for lab tours and demos.
+\item Led outreach events at UC Berkeley: ``Cal Day'' for research group, Society of Women Engineers tours and recruiting for research group, various high school and middle school tours, ``Robot Block Party'' 2014-2016.
+\item Carnegie Science Center SciTech Day, 2019: school outreach event with research group at Carnegie Mellon University.
+\end{enumerate}
+
+
+\end{enumerate}
 
 
 \end{document}
+
+
+
+
+
+
