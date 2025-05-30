@@ -1,0 +1,410 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy CV/Resume
+% XeLaTeX Template
+% Version 1.0 (5/5/2014)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Debarghya Das (http://www.debarghyadas.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+% And more modifications by:
+% Drew Sabelhaus (apsabelhaus@cmu.edu)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% 
+% TO-DO
+% TODO 
+% Updates:
+%	- remove from github public
+%	- remove PII
+%	- DNA actuators patent was granted
+% 	- update/confirm presentations
+%	- update under review and in prep
+
+\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4
+
+% Some other packages:
+\usepackage{etaremune}% enumerate in reverse. That's silly. Used for publications.
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+% Credit to... (insert here)
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+\newcommand\arxivlink[1]{\href{https://arxiv.org/abs/#1}{#1}}
+\newcommand\arxiv[1]{arXiv:\arxivlink{#1}}
+\usepackage{soul} % for better underline, \ul
+
+% And for adjusting tables:
+%\newcommand\Tstrut{\rule{0.1pt}{0.1cm}}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+
+\newcommand{\myname}{\underline{{\fontdescript{A.P. Sabelhaus}}}}
+%\newcommand{\mername}{\underline{M.L. Anderson}}
+%\newcommand{\ranname}{\underline{R. Jing}}
+%\newcommand{\juanname}{\underline{J.C. Pacheco Garcia}}
+%\newcommand{\akuaname}{\underline{A. Dickson}}
+
+\newcommand{\mername}{M.L. Anderson}
+\newcommand{\ranname}{R. Jing}
+\newcommand{\juanname}{J.C. Pacheco Garcia}
+\newcommand{\akuaname}{A. Dickson}
+
+\begin{document}
+
+%-------------------------------------------------------------------------
+%	TITLE SECTION
+%------------------------------------------------------------------------
+
+\lastupdated % Print the Last Updated text at the top right
+
+\raggedright{ % left-align the heading
+\namesection{Andrew P.}{Sabelhaus}{ % Your name
+\urlstyle{same}\url{www.apsabelhaus.com} | 
+\href{mailto:asabelha@bu.edu}{asabelha@bu.edu} | (617) 358-4500 }
+}
+
+  
+%------------------------------------------------
+% Education
+%------------------------------------------------
+
+% I'm writing this out manually instead of using the nice section headers.
+% TO-DO: make this into new commands to make easy.
+
+\section{Education}
+\vspace{0.2cm}
+
+%%%%%%%%%% PhD:
+
+% First line: degree and school
+\fontsubsection{Ph.D.  Mechanical Engineering}
+\hfill % pushes the following line to the right side
+\fontdescript{University of California, Berkeley}
+
+% On the next line:
+\fontlocation{Dissertation title: {\it Tensegrity Spines for Quadruped Robots}}
+\hfill  %, have the date flush-right under the school name
+\fontlocation{August 2019}
+
+% Then, the committee members
+{\fontlocation Dissertation Committee: {\it Alice M. Agogino (Chair), Andrew Packard, Claire Tomlin, Murat Arcak}}
+
+% spacing for the next degree
+%\sectionspace
+\vspace{0.1cm}
+
+%%%%%%%%%% Master's:
+
+% First line: degree and school
+\fontsubsection{M.S.  Mechanical Engineering}
+\hfill % pushes the following line to the right side
+\fontdescript{University of California, Berkeley}
+
+% On the next line:
+\fontlocation{Thesis: {\it Mechanism and Sensor Design for SUPERball, a Cable-Driven Tensegrity Robot}}
+\hfill  %, have the date flush-right under the school name
+\fontlocation{Dec. 2014}
+
+% Then, the committee members
+{\fontlocation Thesis Committee: {\it Alice M. Agogino, Dennis Lieu}}
+
+% spacing for the next degree
+%\sectionspace
+\vspace{0.1cm}
+
+%%%%%%%%%% Bachelor's:
+
+% First line: degree and school
+\fontsubsection{B.S.  Mechanical Engineering}
+\hfill % pushes the following line to the right side
+\fontdescript{University of Maryland, College Park}
+
+% On the next line:
+%\hspace{0.7cm} \fontsubsection{Minor: Computer Science}
+{\fontlocation {\it Minor in Computer Science}}
+\hfill  %, have the date flush-right under the school name
+\fontlocation{May 2012}
+
+% spacing for the next degree
+%\sectionspace
+
+%---------------------------------------------------------------------
+% Professional Experience
+%---------------------------------------------------------------------
+
+% List my NASA stuff here - technically happened contemporanously but...
+\vspace{0.2cm}
+\section{Appointments}
+
+\vspace{0.1cm}
+
+%% IC Postdoc
+
+%{\fontdescript{Intelligence Community (IC) Postdoctoral Research Program \hfill Postdoctoral Fellow}}
+
+%{\location{\hspace{0.3cm} Administered by Oak Ridge Institute for Science and Education (ORISE) \hfill 2020 - Present}}
+%{\location{\hspace{0.3cm} Hosted at Carnegie Mellon University, Dept. of Mech. Eng. }}
+%{\location{\hspace{0.3cm} Pittsburgh, PA}}
+
+
+{\fontdescript{Boston University \hfill Assistant Professor}}
+
+{\location{\hspace{0.3cm} Department of Mechanical Engineering \hfill 2022 - Present}}
+{\location{\hspace{0.3cm} Division of Systems Engineering \hfill 2022 - Present}}
+{\location{\hspace{0.3cm} Center for Information Systems and Engineering \hfill 2022 - Present}}
+%{\location{\hspace{0.3cm} PI, Soft Robotics Control Lab}}
+
+\vspace{0.1cm}
+
+{\fontdescript{Carnegie Mellon University \hfill Postdoctoral Research Fellow}}
+
+{\location{\hspace{0.3cm} Deptartment of Mechanical Engineering \hfill 2019 - 2021}}
+%{\location{\hspace{0.3cm} Soft Machines Lab ({\it{PI: Carmel Majidi}}) \hfill Pittsburgh, PA}}
+
+\vspace{0.1cm}
+
+%% NASA, through NSTRF
+
+{\fontdescript{NASA Ames Research Center \hfill Visiting Technologist}}
+
+{\location{\hspace{0.3cm} Intelligent Systems Division \hfill 2015 - 2019}}
+%{\location{\hspace{0.3cm} Intelligent Robotics Group and Robust Software Engineering \hfill Moffet Field, CA}}
+
+%{\location{\hspace{0.3cm} Intelligent Systems Division \hfill 2015 - 2019}}
+%{\location{\hspace{0.3cm} Intelligent Robotics Group and Robust Software Engineering}}
+%{\location{\hspace{0.3cm} Moffet Field, CA}}
+%{\location{\hspace{0.3cm} Intelligent Robotics Group and Robust Software Engineering \hfill Moffet Field, CA}}
+
+\vspace{0.1cm}
+
+%% NASA and Berkeley, when I was on the NSF fellowship
+
+{{\fontdescript{University of California, Berkeley \hfill Graduate Research Fellow}}
+  
+{\location{\hspace{0.3cm} Department of Mechanical Engineering \hfill 2012-2019}}
+%{\location{\hspace{0.3cm} Berkeley Emergent Space Tensegrities Lab ({\it{PI: Alice Agogino}}) \hfill Berkeley, CA}}
+
+%{\location{\hspace{0.3cm} Dept. of Mechanical Engineering \hfill 2012-2019}}
+%{\location{\hspace{0.3cm} Berkeley Emergent Space Tensegrities Lab ({\it{PI: Alice Agogino}})}}
+%{\location{\hspace{0.3cm} Berkeley, CA}}
+
+
+%\sectionspace % Some whitespace after the section
+
+%-----------------------------------------------------------------------
+% Funding
+%------------------------------------------------------------------------
+
+% To-Do: have I helped win any other grants?
+\vspace{0.2cm}
+\section{Awards And Honors}
+
+\vspace{0.1cm}
+
+%\sectionspace
+
+\begin{etaremune}[itemsep=0.05cm]
+
+%\item {{\fontdescript{NRO Architecture After Next, Research Grant.}} National Reconnaissance Office. Title: {\it Soft Robot Proprioception with Space-Compatible Artificial Muscles.} \$210,459. 2023-2024.}
+
+%\item {{\fontdescript{NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI), Research Grant.}} National Science Foundation. Title: {\it Discrete Simulation of Flexible Structures and Soft Robots.} \$169,987. 2022-2025.}
+
+\item {{\fontdescript{NSF Faculty Early Career Development Program (CAREER) Award.}} National Science Foundation. Title: {\it Safe Autonomy for Soft Robots.} 2024-2029.}
+
+\item {{\fontdescript{Intelligence Community Postdoctoral Research Fellowship.}} Office of the Director of National Intelligence. Title: {\it Rapid Deployment of Hard-to-Control Robots with Optimality Tradeoffs.} 2020-2022.}
+
+\item {{\fontdescript{NASA Space Technology Research Fellowship.}} National Aeronautics and Space Administration. Title: {\it Trajectory Tracking in Nonlinear, High-Order, Underactuated Robotic Systems.} 2015-2019.}
+  
+%\item {{\fontdescript{CITRIS Tech for Social Good Development Grant.}} University of California Center for Information Technology Research in the Interest of Society (CITRIS). Title: {\it Laika, The Robot Transport for Disaster Relief.}  Block grant, 2018.}
+
+\item {{\fontdescript{Markowski-Leach Foundation Award.}} {\it Awarded to individuals at San Francisco Bay Area institutions who ``are likely to make a substantial contribution to society.''} 2013-2014, re-awarded 2016-2018.}
+%\\ Currently the only repeated awardee on record.}
+
+\item {{\fontdescript{NSF Graduate Research Fellowship.}} National Science Foundation. 2012-2015.}
+
+\end{etaremune}
+
+%-----------------------------------------------------------------------
+% Research Productivity Statistics/Snapshot
+%------------------------------------------------------------------------
+
+\vspace{0.2cm}
+\section{Research Output Snapshot}
+%\vspace{-0.3cm}
+ 
+%\renewcommand{\arraystretch}{1.2}
+%\begin{tabularx}{1\textwidth}{ p{3cm} | p{3cm} | p{3cm} | X | X }
+%\multicolumn{3}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
+%\hline
+%						& 1st-Author or PI:\Tstrut 	& All: 	& \multirow{3}{*}{\huge 813*  (343$^\dag$) \Tstrut}	& \multirow{3}{*}{\huge 13*  (7$^\dag$) \Tstrut} \\
+%Conference: \Tstrut	& \Large 7 					& \Large 12 			& 													&  \\
+%Journal: 			& \Large 4					& \Large 9 			& 													& \\
+%Total: 				& \Large 11 					& \Large 21			&													&
+%\end{tabularx}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{1\textwidth}{ p{3cm} | p{2cm} | p{2cm} | p{2cm} | X | X }
+\multicolumn{4}{ p{9cm} | }{ {\fontdescript{Peer-Reviewed Publication Count:}} } & {\fontdescript{Total Citations:}} & {\fontdescript{h-index:}} \\
+\hline
+					& Conference:\Tstrut 	& Journal: 		& Total: 		& \multirow{3}{*}{\huge 1378*  (664$^\dag$) \Tstrut}	& \multirow{3}{*}{\huge 16*  (11$^\dag$) \Tstrut} \\
+1st-Author or PI: \Tstrut	& \Large 10 			& \Large 5 		& \Large 15	&										&  \\
+All: 					& \Large 15		& \Large 12 		& \Large 27	&										& \\
+\end{tabularx}
+
+% some explanations
+\vspace{0.2cm}
+{\small \it *Via Google Scholar, \href{https://scholar.google.com/citations?user=ze69yEMAAAAJ\&hl=en}{https://scholar.google.com/citations?user=ze69yEMAAAAJ\&hl=en}. \\
+$^\dag$Via Web of Science, \href{https://www.webofscience.com/wos/author/record/1791313}{https://www.webofscience.com/wos/author/record/1791313}.}
+
+%{\small \it *Google Scholar, \href{https://scholar.google.com/citations?user=ze69yEMAAAAJ}{https://scholar.google.com/citations?user=ze69yEMAAAAJ}. $^\dag$Web of Science, \href{https://www.webofscience.com/wos/author/record/1791313}{https://www.webofscience.com/wos/author/record/1791313.}
+
+%-----------------------------------------------------------------------
+% Publications - now split between journal and conference
+%------------------------------------------------------------------------
+
+%\vspace{0.2cm}
+\section{Journal Publications}
+\vspace{0.2cm}
+
+% For the publication titles, I use the 'description' font from the class.
+\begin{etaremune}[itemsep=0.1cm]
+
+\item \myname, Z. Patterson, A. Wertz, C. Majidi, ``Safe Supervisory Control of Soft Robot Actuators,'' {\it Soft Robotics}, Aug. 2024. \doi{10.1089/soro.2022.0131}
+
+\item A. Choi, R. Jing, \myname, M.K. Jawed, ``DisMech: A Discrete Differential Geometry-Based Physical Simulator for Soft Robots and Structures,'' {\it IEEE Robotics and Automation Letters}, Feb 2024. \doi{10.1109/LRA.2024.3365292}
+
+\item X. Huang, Z.J. Patterson, \myname, W. Huang, K. Chin, Z. Ren, M.K. Jawed, C. Majidi, ``Design and Closed Loop Motion Planning of an Untethered Swimming Soft Robot using 2D Discrete Elastic Rods Simulations,'' {\it Advanced Intelligent Systems}, 2200163, 2022. \doi{10.1002/aisy.202200163}
+
+\item X. Huang, \myname, M. K. Jawed, L. Jin, J. Zou, Y. Chen,``Materials, design, modeling and control of soft robotic artificial muscles,'' {\it Frontiers in Robotics and AI}, Vol. 30, Nov 2022. \doi{10.3389/frobt.2022.1074549}
+
+\item \myname, R.K. Mehta, A. Wertz, C. Majidi, ``In-Situ Sensing and Dynamics Predictions for Electrothermally-Actuated Soft Robot Limbs,'' {\it Frontiers in Robotics and AI}, Vol. 9, May 2022. \doi{10.3389/frobt.2022.888261}
+
+\item M. Zadan, D.K. Patel, \underline{{\fontdescript{A.P. Sabelhaus}}}, J.Liao, A. Wertz, L. Yao, C. Majidi, ``Liquid Crystal Elastomer with Integrated Soft Thermoelectrics for Shape Memory Actuation and Energy Harvesting,'' {\it Advanced Materials}, April 2022. \doi{10.1002/adma.202200857}
+
+\item Z.J. Patterson, \underline{{\fontdescript{A.P. Sabelhaus}}}, C. Majidi, ``Robust Control of a Multi-Axis Shape Memory Alloy-Driven Soft Manipulator,'' {\it IEEE Robotics and Automatics Letters}, April 2022. \doi{10.1109/LRA.2022.3143256}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, K. Zampaglione, E. Tang, L.H. Chen, A.K. Agogino, A.M. Agogino, ``Double-Helix Linear Actuators.'' {\it Journal of Mechanical Design (ASME)}, Vol. 143, Issue 10, Oct. 2021. \doi{10.1115/1.4050739}
+
+\item Z. Ren, X. Huang, M. Zarepoor, \underline{{\fontdescript{A.P. Sabelhaus}}}, C. Majidi, ``Shape Memory Alloy (SMA) Actuator with Embedded Liquid Metal Curvature Sensor for Closed-Loop Control." {\it Frontiers in Robotics and AI}, Vol. 8, Mar. 2021. \doi{10.3389/frobt.2021.599650}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, H. Zhao, E. Zhu, A.K. Agogino, A.M. Agogino, ``Model-Predictive Control with Inverse Statics Optimization for Tensegrity Spine Robots.'' {\it IEEE Transactions on Control System Technology}, Vol. 29, Issue 1, Jan. 2021. \doi{10.1109/TCST.2020.2975138}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, A.H. Li, K.A. Sover, J. Madden, A. Barkan, A.K. Agogino, A.M. Agogino, ``Inverse Statics Optimization for Compound Tensegrity Robots.'' {\it IEEE Robotics and Automation Letters}, July 2020. \doi{10.1109/LRA.2020.2983699}
+
+\item K. Caluwaerts, J. Despraz, A. Iscen, \underline{{\fontdescript{A.P. Sabelhaus}}}, J. Bruce, B. Schrauwen, V. SunSpiral, ``Design and Control of Compliant Tensegrity Robots through Simulation and Hardware Validation.'' {\it Journal of the Royal Society Interface,} Sept. 2014. \doi{10.1098/rsif.2014.0520}
+
+\end{etaremune}
+
+%%%%%%%%% Conferences
+
+%\vspace{0.2cm}
+\section{Conference Publications}
+\vspace{0.2cm}
+
+% For the publication titles, I use the 'description' font from the class.
+\begin{etaremune}[itemsep=0.1cm]
+
+\item \akuaname, \juanname, \ranname, \mername, \myname, ``Real-Time Trajectory Generation for Soft Robot Manipulators Using Differrential Flatness,'' {\it IEEE International Conference on Soft Robotics (RoboSoft)}, Accepted for Publication, 2025. \doi{10.48550/arXiv.2412.08568}
+
+\item M.L. Anderson, R. Jing, J.C. Pacheco Garcia, I. Yang, S. Alizadeh-Shabdiz, C. DeLorey, \myname, ``Maximizing Consistent Force Output for Shape Memory Alloy Artificial Muscles in Soft Robots,'' {\it IEEE International Conference on Soft Robotics (RoboSoft)}, Accepted for Publication, 2024.
+
+\item J.C. Pacheco Garcia, R. Jing, M.L. Anderson, M. Ianus-Valdivia, \myname, ``A Comparison of Mechanics Simplifications in Pose Estinmation for Thermally-Actuated Soft Robot Limbs.'' {\it ASME 2023 Conference on Smart Materials, Adaptive Structures, and Intelligent Systems (SMASIS)}, Sept. 2023. \doi{10.1115/SMASIS2023-110774}
+
+\item A. Wertz*, \underline{{\fontdescript{A.P. Sabelhaus}}}*, C. Majidi, ``Trajectory Optimization for Thermally-Actuated Soft Planar Robot Limbs,'' {\it IEEE International Conference on Soft Robotics (RoboSoft)}, April 2022. *Equal Contribution. \doi{10.1109/RoboSoft54090.2022.9762226}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, C.Majidi, ``Gaussian Process Dynamics Models for Soft Robots with Shape Memory Actuators.'' {\it IEEE International Conference on Soft Robotics (RoboSoft)}, April 2021.  \doi{10.1109/RoboSoft51838.2021.9479294}
+
+\item Z. Patterson, \underline{{\fontdescript{A.P. Sabelhaus}}}, K. Chin, T. Hellebrekers, C. Majidi, ``An Untethered Brittle Star Robot for Closed-Loop Underwater Locomotion.'' {\it IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS),} Oct. 2020. \doi{10.1109/IROS45743.2020.9341008}
+
+\item L.H. Chen, M.C. Daly, \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, H.J. Garnier, M.I. Verdugo, E. Tang, C.U. Spangenberg, F. Ghahani, A.K. Agogino, A.M. Agogino, ``Modular Elastic Lattice Platform for Rapid Prototyping of Tensegrity Robots.'' {\it  ASME International Design Engineering Technical Conferences (IDETC) / 41st Mechanisms and Robotics Conference}, Aug 2017. \doi{10.1115/DETC2017-68264}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, A.K. Akella, Z.A. Ahmad, V. SunSpiral, ``Model-Predictive Control of a Flexible Spine Robot.'' {\it American Control Conference (ACC)}, IEEE, May 2017. \doi{10.23919/ACC.2017.7963738}
+
+\item K. Zampaglione, \underline{{\fontdescript{A.P. Sabelhaus}}}, L.H. Chen, A.M. Agogino,  A.K. Agogino, ``DNA-Structured Linear Actuators.'' {\it ASME International Design Engineering Technical Conferences (IDETC) / 40th Mechanisms and Robotics Conference}, Aug 2016. \doi{10.1115/DETC2016-60291}
+  
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, H. Ji, P. Hylton, Y. Madaan, C. Yang, J. Friesen, V. SunSpiral, A.M. Agogino, ``Mechanism Design and Simulation of the ULTRA Spine, a Tensegrity Robot.'' {\it ASME International Design Engineering Technical Conferences (IDETC) / 39th Mechanisms and Robotics Conference}, Aug 2015. \doi{10.1115/DETC2015-47583}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, J. Bruce, K. Caluwaerts, P. Manovi, R.F. Firoozi, S. Dobi, A.M. Agogino, V. SunSpiral, ``System Design and Locomotion of SUPERball, an Untethered Tensegrity Robot.'' {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2015. \doi{10.1109/ICRA.2015.7139590}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}; J. Bruce, K. Caluwaerts, Y. Chen, D. Lu, Y. Liu, A.K. Agogino, V. SunSpiral, A.M. Agogino, ``Hardware Design and Testing of SUPERball, a Modular Tensegrity Robot.'' {\it The 6th World Conference on Structural Control and Monitoring (6WCSCM),} July 2014.
+
+\item J. Bruce, \underline{{\fontdescript{A.P. Sabelhaus}}}, Y. Chen, D.Lu, K. Morse, S. Milam, K. Caluwaerts, A.M. Agogino, V. SunSpiral, ``SUPERball: Exploring Tensegrities for Planetary Probes.'' {\it 12th International Symposium on Artificial Intelligence, Robotics, and Automation in Space (i-SAIRAS),} June 2014.
+
+\item J. Bruce, K. Caluwaerts, A. Iscen, \underline{{\fontdescript{A.P. Sabelhaus}}}, V. SunSpiral, ``Design and Evolution of a Modular Tensegrity Robot Platform.'' {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2014. \doi{10.1109/ICRA.2014.6907361}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, D. Mirsky, L.M. Hill, S. Bergbreiter, ``TinyTeRP: A Tiny Terrestrial Robotic Platform with Modular Sensing.'' {\it IEEE International Conference on Robotics and Automation (ICRA),} May 2013. \doi{ 10.1109/ICRA.2013.6630933}
+
+\end{etaremune}
+
+%%%%%%%%% Conferences
+
+%\vspace{0.2cm}
+\section{Editorials}
+\vspace{0.2cm}
+
+% For the publication titles, I use the 'description' font from the class.
+\begin{etaremune}[itemsep=0.1cm]
+
+\item X. Huang, \myname, M.K. Jawed, L. Jin, J. Zou, Y. Chen. ``Editorial: Materials, design, modeling and control of soft robotic artificial muscles.'' {\it Frontiers in Robotics and AI}, Nov. 2021.  \doi{10.3389/frobt.2022.1074549}
+
+\end{etaremune}
+
+%--------------------------------------------------------------------
+% Workshop Publications (these went through peer review, but only by organizers.)
+%--------------------------------------------------------------------
+
+%%%%%%%%%%% AS OF JAN 3rd, 2020: No more workshop sections. These are all superseded by peer-reviewed publications, and I'm not always happy about the initial results in the workshops.
+
+% \section{Workshop Publications}
+
+% \vspace{0.2cm}
+
+% \begin{etaremune}
+
+% \item {\fontdescript{Inverse Kinematics for Control of Tensegrity Soft Robots: Existence and Optimality of Solutions.}} \underline{Sabelhaus, A.P.}; Agogino, A.K.; {\it IEEE/RSJ International Conference on Intelligent Robots and Systems: Workshop on Soft Robotic Modeling and Control,} Oct. 2018. Available, arXiv:1808.08252
+
+% \item {\fontdescript{Trajectory Tracking Control of a Flexible Spine Robot, With and Without a Reference Input.}} \underline{Sabelhaus, A.P.}; Zhao, S.H.; Daly, M.C.; Tang, E.; Zhu, E.; Akella, A.K.; Ahmad, Z.A.; SunSpiral, V.; Agogino, A.M.; {\it NASA/ESA Conference on Adaptive Hardware and Systems: Structurally Adaptive Tensegrity Robots Workshop,} July 2017. Available, arXiv:1808.08309
+  
+% \end{etaremune}
+
+
+% Do separate sections for under review (submitted, with preprints)
+% and works-in-progress (no preprints)
+
+%-----------------------------------------------------------------------
+% Under review / works in progress
+%------------------------------------------------------------------------
+
+\section{Under Review + Pre-prints}
+
+\vspace{0.2cm}
+
+\begin{etaremune}[itemsep=0.1cm]
+
+\item M.L. Anderson, J.C. Pacheco Garcia, C. DeLorey, R. Jing, S. Alizadeh-Shabdiz, Z. Patterson, \myname, ``Safe Autonomous Environmental Contact for Soft Robots using Control Barrier Functions.'' {\it Under Review, } \arxiv{2504.14755}
+
+\item R. Jing, C. Van Hook, I. Yang, \myname, ``Fault Detection and Response for Safe Control of Artificial Muscles in Soft Robots.'' {\it Under Review.}
+
+\item R. Jing, M. Anderson, M. Ianus-Valdivia, A. Akber, C. Majidi, \myname, ``Safe Balancing Control of a Soft Legged Robot.'' {\it Preprint Only}. \arxiv{2209.13715}
+
+\item \underline{{\fontdescript{A.P. Sabelhaus}}}, L.A. Janse van Vuuren, A. Joshi, E. Zhu, H.J. Garnier, K.A. Sover, J. Navarro, A.K. Agogino, V. SunSpiral, A.M. Agogino, ``Design, Simulation, and Testing of a Flexible Actuated Spine for Quadruped Robots.'' {\it Preprint Only.} \arxiv{1804.06527}
+
+%Available, arXiv:1804.06527 
+
+\end{etaremune}  
+
+
+
+\end{document}
